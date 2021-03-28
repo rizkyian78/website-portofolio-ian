@@ -1,0 +1,12 @@
+@import './variable.scss';
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  background-color: $primary-color;
+}
+
+.main {
+  color: $lightest-stale;
+}
