@@ -1,9 +1,7 @@
-import style from '../styles/globals.scss'
-
+import style from '../styles/Home.module.scss'
 import { Menu, Button, Row, Typography } from 'antd'
 
 export default function Home() {
-  console.log(style.main)
   return (
     <>
       <Row justify="space-between" align="middle">

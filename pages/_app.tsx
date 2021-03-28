@@ -1,3 +1,4 @@
+import '../styles/globals.scss'
 import 'antd/dist/antd.css'
 
 function MyApp({ Component, pageProps }) {
