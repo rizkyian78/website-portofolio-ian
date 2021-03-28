@@ -15,7 +15,7 @@ const themeVariables = lessToJS(
   fs.readFileSync(path.resolve(__dirname, './styles/antd-less.less'), 'utf8')
 );
 
-module.exports = withFilter(withCSS(
+module.exports = withCSS(
     withSass({
         cssModules: true,
         ...withLess({
@@ -53,4 +53,4 @@ module.exports = withFilter(withCSS(
           }
         })
       })
-  ));
+  );

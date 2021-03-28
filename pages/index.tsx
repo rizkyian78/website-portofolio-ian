@@ -1,5 +1,7 @@
-import style from '../styles/Home.module.scss'
-import { Menu, Button, Row, Typography } from 'antd'
+import style from '../styles/Home.module.scss';
+import '../styles/globals.scss';
+
+import { Menu, Button, Row, Typography } from 'antd';
 
 export default function Home() {
   return (
@@ -48,5 +50,5 @@ export default function Home() {
         </Menu>
       </Row>
     </>
-  )
+  );
 }
