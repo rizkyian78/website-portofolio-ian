@@ -1,4 +1,4 @@
-@import './variable.scss';
+@import '../../styles/variable.scss';
 
 .main {
   color: $lightest-stale;
@@ -16,4 +16,11 @@
 
 .spanModule {
   color: $green;
+}
+.divider {
+  border-left: 1px solid $lightest-stale;
+  height: 300px;
+  position: absolute;
+  margin-left: -4px;
+  top: 50;
 }
