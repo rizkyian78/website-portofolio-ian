@@ -10,6 +10,10 @@
   }
 }
 
+#trans:hover {
+  transition: $transition;
+}
+
 .ant-menu-submenu-selected {
   border-bottom: 0;
 }

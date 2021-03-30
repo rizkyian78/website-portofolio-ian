@@ -1,0 +1,23 @@
+@import '../../styles/Home.module.scss';
+@import '../../styles/variable.scss';
+
+#normalText {
+  color: $green;
+}
+
+#maxWidth {
+  width: 1200;
+  max-width: 3000;
+}
+
+#nameTransparent {
+  color: $lightest-stale;
+  margin: 0;
+  font-size: clamp(40px, 8vw, 60px);
+}
+
+#contextUnder {
+  color: $slate;
+  margin: 0;
+  font-size: clamp(40px, 4vw, 50px);
+}

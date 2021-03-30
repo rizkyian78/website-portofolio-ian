@@ -1,0 +1,21 @@
+@import '../About.scss';
+@import '../../../styles//variable.scss';
+
+#paragraph {
+  color: $slate;
+  margin-top: 20px;
+  text-align: justify;
+  max-width: 50%;
+}
+#buttonPDF {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: $green;
+  height: 5rem;
+  font-size: 13px;
+  width: 10rem;
+  margin-top: 50px;
+  border-color: $green;
+}

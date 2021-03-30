@@ -1,17 +1,18 @@
 import style from './SideBarRight.scss';
-import { Affix } from 'antd';
+import { Affix, Button } from 'antd';
 
 export default function SideBarLeft() {
   return (
-    <Affix offsetTop={400}>
-      <a
+    <Affix offsetTop={250}>
+      <Button
         className={style.main}
+        type="text"
         href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rizkyian78@gmail.com`}
         target="_blank"
         rel="noopener noreferrer"
       >
         rizkyian78@gmail.com
-      </a>
+      </Button>
     </Affix>
   );
 }

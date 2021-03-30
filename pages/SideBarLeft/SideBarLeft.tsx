@@ -9,26 +9,23 @@ import anime, { AnimeInstance } from 'animejs';
 // import 'antd/dist/antd.css';
 
 export default function SideBarLeft() {
-  const twitterRef = React.useRef<AnimeInstance>(null);
   const handleClick = (data) => {
     setTimeout(() => {
       anime({
         targets: `#${data}`,
-        opacity: [0, 5],
-        translateX: [250, 0],
-        duration: 400,
-        easing: 'easeOutSine',
+        rotate: 360,
+        duration: 3,
       });
     }, 100);
   };
   return (
     <>
-      <Affix offsetTop={400}>
+      <Affix offsetTop={400} style={{ width: 10 }}>
         <Space className={[style.main].join(' ')} direction="vertical">
           <Button
             href="https://twitter.com/rizkyian1"
             type="text"
-            size="middle"
+            size="small"
             id="twitter"
             icon={<IconTwitter />}
             className={[style.main].join(' ')}
@@ -40,7 +37,7 @@ export default function SideBarLeft() {
             href="https://www.instagram.com/rizkyian5719"
             type="text"
             id="instagram"
-            size="middle"
+            size="small"
             icon={<IconInstagram />}
             className={[style.main].join(' ')}
             target="_blank"
@@ -51,7 +48,7 @@ export default function SideBarLeft() {
           <Button
             href="https://twitter.com/rizkyian1"
             type="text"
-            size="middle"
+            size="small"
             id="linkedin"
             icon={<IconLinkedin />}
             className={[style.main].join(' ')}
@@ -62,7 +59,18 @@ export default function SideBarLeft() {
           <Button
             href="https://twitter.com/rizkyian1"
             type="text"
-            size="middle"
+            size="small"
+            id="github"
+            icon={<IconGithub />}
+            className={[style.main].join(' ')}
+            target="_blank"
+            rel="noopener noreferrer"
+            onMouseEnter={(e) => handleClick('github')}
+          />
+          <Button
+            href="https://twitter.com/rizkyian1"
+            type="text"
+            size="small"
             id="github"
             icon={<IconGithub />}
             className={[style.main].join(' ')}
@@ -71,7 +79,6 @@ export default function SideBarLeft() {
             onMouseEnter={(e) => handleClick('github')}
           />
         </Space>
-        <div className={style.divider}></div>
       </Affix>
     </>
   );
