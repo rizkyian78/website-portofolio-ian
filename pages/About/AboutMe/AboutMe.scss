@@ -1,0 +1,35 @@
+@import '../../../styles/variable.scss';
+@import '../ParagraphAbout/ParagraphAbout.scss';
+
+#coba {
+  border-bottom: 1px solid $lightest-stale;
+  width: 80%;
+}
+
+#numberText {
+  color: $green;
+}
+
+#aboutMe {
+  color: $lightest-stale;
+  font-weight: bold;
+  font-size: large;
+}
+
+#frame {
+  z-index: -30;
+  border-radius: 20px;
+  margin-left: -200px;
+}
+
+#paragraph {
+  color: green;
+}
+
+#image {
+  filter: blur(1px) grayscale(75%);
+  &:hover {
+    filter: grayscale(0) invert(0);
+    opacity: 1;
+  }
+}

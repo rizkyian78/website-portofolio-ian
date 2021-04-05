@@ -5,10 +5,17 @@ export default function ParagraphAbout() {
   return (
     <>
       <Typography id={style.paragraph}>
-        I'm a Jakarta-based software engineer who specializes in building (and
-        occasionally designing) exceptional digital experiences. Currently, I'm
-        an engineer at Nusantech focused on building accessible, human-centered
-        products.
+        I'm a Jakarta-based software engineer who specializes in building
+        exceptional digital experiences. Currently, I'm an engineer at{' '}
+        <a
+          href="https://nusantech.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          id={style.linkToNusantech}
+        >
+          Nusantech
+        </a>{' '}
+        focused on building accessible, human-centered products.
       </Typography>
       <Button
         type="ghost"

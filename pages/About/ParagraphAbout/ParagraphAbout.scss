@@ -1,6 +1,28 @@
 @import '../About.scss';
 @import '../../../styles//variable.scss';
 
+#linkToNusantech {
+  color: $green;
+  text-decoration: none;
+  position: relative;
+  &:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: $green;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  &:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
+
 #paragraph {
   color: $slate;
   margin-top: 20px;
@@ -13,9 +35,9 @@
   justify-content: center;
   border-radius: 5px;
   color: $green;
-  height: 5rem;
+  height: 4rem;
   font-size: 13px;
   width: 10rem;
-  margin-top: 50px;
+  margin-top: 2rem;
   border-color: $green;
 }

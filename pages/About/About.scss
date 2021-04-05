@@ -13,11 +13,11 @@
 #nameTransparent {
   color: $lightest-stale;
   margin: 0;
-  font-size: clamp(40px, 8vw, 60px);
+  font-size: clamp(40px, 8vw, 80px);
 }
 
 #contextUnder {
-  color: $slate;
   margin: 0;
-  font-size: clamp(40px, 4vw, 50px);
+  font-size: clamp(40px, 6vw, 80px);
+  color: $slate;
 }
