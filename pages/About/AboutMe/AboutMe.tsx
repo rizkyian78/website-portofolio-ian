@@ -3,12 +3,14 @@ import style from './AboutMe.scss';
 
 import { createFromIconfontCN } from '@ant-design/icons';
 
-const { Title, Paragraph } = Typography;
+const { Paragraph } = Typography;
 
 const IconFont = createFromIconfontCN({
   scriptUrl: [
     '//at.alicdn.com/t/font_1788044_0dwu4guekcwr.js', // icon-javascript, icon-java, icon-shoppingcart (overrided)
-    '//at.alicdn.com/t/font_1788592_a5xf2bdic3u.js',
+    '//at.alicdn.com/t/font_2468873_l3cvtxjro9s.js',
+    '//at.alicdn.com/t/font_2468873_5ltmnkjrg5w.js',
+    '//at.alicdn.com/t/font_2468829_ieg1tbqpubf.js',
   ],
 });
 
@@ -39,32 +41,53 @@ export default function AboutMe() {
           >
             Nusantech
           </a>{' '}
-          for a variety of clients. Here are a few technologies I've been
-          working with recently:
+          I create Youtube content with my friends about teaching Japanese to
+          people who want to learn Japanese without spending money by looking at
+          my content. for a variety of clients. Here are a few technologies I've
+          been working with recently:
           <Space></Space>
           <Row justify="space-around">
             <Col>
-              <IconFont type="icon-javascript" /> Typescript
-              <li>React</li>
-              <li>Next.js</li>
-              <li>Node.js</li>
-              <li>Sass</li>
+              <li style={{ listStyle: 'none' }}>
+                <IconFont type="icon-typescript" /> Typescript
+              </li>
+              <li style={{ listStyle: 'none' }}>
+                <IconFont type="icon-javascript" /> Javascript (ES6+)
+              </li>
+              <li style={{ listStyle: 'none' }}>
+                <IconFont type="icon-python" /> Python
+              </li>
+              <li style={{ listStyle: 'none' }}>
+                <IconFont type="icon-go" /> Go
+              </li>
+              <li style={{ listStyle: 'none' }}>
+                <IconFont type="icon-sass" /> Sass
+              </li>
             </Col>
             <Col>
-              <li>Relational Database</li>
-              <li>Non Relational Database</li>
-              <IconFont type="icon-python" /> Python
-              <li>Unit Testing</li>
+              <li style={{ listStyle: 'none' }}>
+                <IconFont type="icon-reactjs-line" /> React
+              </li>
+              <li style={{ listStyle: 'none' }}>
+                <IconFont type="icon-mysql" /> Mysql
+              </li>
+              <li style={{ listStyle: 'none' }}>
+                <IconFont type="icon-mongodb" /> Mongodb
+              </li>
+              <li style={{ listStyle: 'none' }}>
+                <IconFont type="icon-jest" /> Jest
+              </li>
             </Col>
           </Row>
         </Paragraph>
         <Image
+          draggable={false}
           style={{ borderRadius: 20 }}
           preview={false}
           id={style.image}
           height={300}
           width={300}
-          src="https://awsimages.detik.net.id/community/media/visual/2018/11/07/c24ec212-e5ec-4335-a014-768f86e4a1e9.png?w=700&q=90"
+          src="/profile.jpeg"
         />
         <Card
           id={style.frame}

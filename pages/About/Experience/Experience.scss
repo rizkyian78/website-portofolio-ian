@@ -1,0 +1,22 @@
+@import '../About.scss';
+@import '../../../styles/variable.scss';
+@import '../AboutMe/AboutMe.scss';
+@import '../../../styles/variable.scss';
+
+#divider {
+  border-bottom: 1px solid $lightest-stale;
+  width: 60%;
+}
+
+#tabText {
+  color: $lightest-stale;
+}
+
+#tanggal {
+  color: $slate;
+  font-size: 12px;
+  font-weight: bold;
+}
+#list {
+  color: $green;
+}
