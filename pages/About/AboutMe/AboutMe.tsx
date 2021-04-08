@@ -11,6 +11,7 @@ const IconFont = createFromIconfontCN({
     '//at.alicdn.com/t/font_2468873_l3cvtxjro9s.js',
     '//at.alicdn.com/t/font_2468873_5ltmnkjrg5w.js',
     '//at.alicdn.com/t/font_2468829_ieg1tbqpubf.js',
+    '//at.alicdn.com/t/font_2471841_jvn0t21sw0g.js',
   ],
 });
 
@@ -63,6 +64,9 @@ export default function AboutMe() {
               <li style={{ listStyle: 'none' }}>
                 <IconFont type="icon-sass" /> Sass
               </li>
+              <li style={{ listStyle: 'none' }}>
+                <IconFont type="icon-aws" /> AWS
+              </li>
             </Col>
             <Col>
               <li style={{ listStyle: 'none' }}>
@@ -76,6 +80,12 @@ export default function AboutMe() {
               </li>
               <li style={{ listStyle: 'none' }}>
                 <IconFont type="icon-jest" /> Jest
+              </li>
+              <li style={{ listStyle: 'none' }}>
+                <IconFont type="icon-flutter" /> Flutter
+              </li>
+              <li style={{ listStyle: 'none' }}>
+                <IconFont type="icon-firebase" /> Firebase
               </li>
             </Col>
           </Row>
