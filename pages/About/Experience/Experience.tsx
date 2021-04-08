@@ -28,7 +28,11 @@ export default function Experience() {
         </Paragraph>
         <hr id={style.divider} />
       </Row>
-      <Tabs tabPosition="left" id={style.tabText}>
+      <Tabs
+        tabPosition="left"
+        id={style.tabText}
+        animated={{ inkBar: false, tabPane: false }}
+      >
         <TabPane tab="Nusantech" key="2">
           SoftWare Engineer{' '}
           <Typography.Link
@@ -146,25 +150,6 @@ export default function Experience() {
             Communicate with multi-disciplinary teams of engineers, designers
             and producers on a daily basis
           </li>
-        </TabPane>
-        <TabPane tab="Gojek Driver" key="4">
-          Gojek Driver{' '}
-          <Typography.Link
-            style={{ fontWeight: 'bold' }}
-            href="https://www.gojek.com/id-id/"
-            target="_blank"
-            rel="noopener noreferrer"
-            id={style.linkToNusantech}
-          >
-            @Gojek
-          </Typography.Link>
-          <Typography id={style.tanggal}>Lost Track of Time</Typography>
-          <br />
-          <span style={{ textAlign: 'justify' }}>
-            <IconFont type="icon-24gl-nextFrame" id={style.list} />{' '}
-          </span>
-          as a Gojek Driver thrive to satisficated my Customer, pleasure to work
-          with gojek although as an driver
         </TabPane>
         <TabPane tab="CV Jaya Ice Cream" key="5">
           Gojek Driver{' '}

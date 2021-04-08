@@ -3,3 +3,46 @@
 @import '../AboutMe/AboutMe.scss';
 @import '../../../styles/variable.scss';
 @import '../Experience/Experience.scss';
+@import '../../SideBarLeft/SideBarLeft.scss';
+
+#card {
+  background-color: $light-navy;
+  border-color: transparent;
+  border-radius: 2px;
+  margin-left: -100px;
+  width: 500px;
+  overflow: visible;
+}
+#cardLeft {
+  background-color: $light-navy;
+  border-color: transparent;
+  border-radius: 2px;
+  margin-right: -100px;
+  width: 500px;
+  overflow: visible;
+  z-index: 99;
+}
+
+#projectDesc {
+  color: $slate;
+}
+
+#projectTitleLeft {
+  color: $lightest-stale;
+  text-align: start;
+}
+
+#featureProjectLeft {
+  color: $green;
+  text-align: start;
+}
+
+#projectTitle {
+  color: $lightest-stale;
+  text-align: end;
+}
+
+#featureProject {
+  color: $green;
+  text-align: end;
+}
