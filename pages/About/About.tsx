@@ -4,6 +4,7 @@ import ParagraphAbout from './ParagraphAbout/ParagraphAbout';
 import AboutMe from './AboutMe/AboutMe';
 import Experience from './Experience/Experience';
 import Project from './Project/Project';
+import OtherProject from './OtherProject/OtherProject';
 
 export default function about() {
   return (
@@ -24,6 +25,7 @@ export default function about() {
           <AboutMe />
           <Experience />
           <Project />
+          <OtherProject />
         </Col>
       </Space>
     </>

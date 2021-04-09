@@ -1,0 +1,33 @@
+@import '../Project/Project.scss';
+
+#title {
+  color: $lightest-stale;
+}
+
+#archive {
+  color: $green;
+  text-align: center;
+}
+
+#folder {
+  color: $green;
+}
+
+#projectDescription {
+  color: $lightest-stale;
+}
+
+#projectTool {
+  color: $slate;
+}
+
+#cardProject {
+  background-color: $light-navy;
+  border-radius: 10px;
+  border-color: transparent;
+  transition: margin-top 0.4s;
+  &:hover {
+    margin-top: -15px;
+    transition-timing-function: ease-out;
+  }
+}

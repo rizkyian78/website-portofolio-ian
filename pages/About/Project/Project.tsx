@@ -31,7 +31,7 @@ export default function Project() {
           />
         </Typography.Link>
         <Space direction="vertical">
-          <Typography id={style.featureProject}>FeaturedProject</Typography>
+          <Typography id={style.featureProject}>Featured Project</Typography>
           <Typography.Title level={3} id={style.projectTitle}>
             First Website Portofolio
           </Typography.Title>
@@ -66,7 +66,9 @@ export default function Project() {
       </Space>
       <Space style={{ marginBottom: 200 }}>
         <Space direction="vertical">
-          <Typography id={style.featureProjectLeft}>FeaturedProject</Typography>
+          <Typography id={style.featureProjectLeft}>
+            Featured Project
+          </Typography>
           <Typography.Title level={3} id={style.projectTitleLeft}>
             Thon House Staycation
           </Typography.Title>
@@ -121,10 +123,10 @@ export default function Project() {
         <Typography.Link
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.youtube.com/watch?v=YykjpeuMNEk&list=RDdvgZkm1xWPE&index=5&ab_channel=Coldplay"
+          href="https://protra.herokuapp.com/"
         >
           <Image
-            src="website-portofolio-2.png"
+            src="protra.png"
             preview={false}
             id={style.image}
             height={400}
@@ -133,14 +135,16 @@ export default function Project() {
           />
         </Typography.Link>
         <Space direction="vertical">
-          <Typography id={style.featureProject}>FeaturedProject</Typography>
+          <Typography id={style.featureProject}>Featured Project</Typography>
           <Typography.Title level={3} id={style.projectTitle}>
-            First Website Portofolio
+            Protra
           </Typography.Title>
           <Card size="default" id={style.card}>
             <Paragraph id={style.projectDesc}>
-              The First Website I Created From Scratch That take its for a long
-              time. I don't know this is React FrameWork or not
+              Protra is another popular project management app offering the
+              feature of project time tracking. This app gathers information on
+              your team’s work in the form of activity reports. That’s a great
+              way to analyze your team’s performance and work progress.
             </Paragraph>
           </Card>
           <Row justify="end">
@@ -148,13 +152,13 @@ export default function Project() {
               React JS
             </Typography>
             <Typography style={{ marginRight: 30 }} id={style.projectDesc}>
-              TypeScript
+              Node Js
             </Typography>
-            <Typography id={style.projectDesc}>Firebase</Typography>
+            <Typography id={style.projectDesc}>Heroku</Typography>
           </Row>
           <Row justify="end">
             <Button
-              href="https://twitter.com/rizkyian1"
+              href="https://protra.herokuapp.com/"
               type="text"
               size="small"
               id="github"
