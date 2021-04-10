@@ -9,6 +9,12 @@ export default function Home() {
   return (
     <>
       <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          property="og:title"
+          content="Rizky Ian Indiarto"
+          key="Rizky Ian Indiarto"
+        />
         <meta name="description" content="Rizky Ian Indiarto" />
         <title>Rizky Ian Indiarto || Political Graduate</title>
         <link rel="icon" href="/deerHead.png" />
