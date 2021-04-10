@@ -1,21 +1,22 @@
 @import '../../styles/variable.scss';
 
-.main {
+#main {
   color: $lightest-stale;
+  position: absolute;
   &:hover {
+    margin: 0 auto;
+    margin-top: -10px;
     color: $green;
-    &:focus {
-      color: $green;
-    }
+    transition: margin-top 0.2s ease-out;
   }
+}
+
+#spacing {
+  margin-bottom: 200px;
 }
 
 #trans:hover {
   transition: $transition;
-}
-
-.ant-menu-submenu-selected {
-  border-bottom: 0;
 }
 
 .spanModule {

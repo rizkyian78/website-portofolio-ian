@@ -2,13 +2,18 @@ import Header from './header';
 import About from './About/About';
 import SideBarLeft from './SideBarLeft/SideBarLeft';
 import SideBarRight from './SideBarRight/SideBarRight';
-import { Row, Col, Layout } from 'antd';
+import Head from 'next/head';
+import { Row } from 'antd';
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Rizky Ian Indiarto || Political Graduate</title>
+        <link rel="icon" href="/deerHead.png" />
+      </Head>
       <Header />
-      <Row justify="space-between">
+      <Row justify="space-between" style={{ maxWidth: '100%' }}>
         <SideBarLeft />
         <About />
         <SideBarRight />

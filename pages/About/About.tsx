@@ -5,13 +5,14 @@ import AboutMe from './AboutMe/AboutMe';
 import Experience from './Experience/Experience';
 import Project from './Project/Project';
 import OtherProject from './OtherProject/OtherProject';
+import GetInTouch from './GetInTouch/GetInTouch';
 
 export default function about() {
   return (
     <>
       <Space
         direction="vertical"
-        style={{ textAlign: 'left', width: 900, marginTop: 0 }}
+        style={{ textAlign: 'left', width: 900, marginLeft: -70 }}
       >
         <Typography id={style.normalText}>Hi, my name is</Typography>
         <Col>
@@ -27,6 +28,7 @@ export default function about() {
           <Project />
           <OtherProject />
         </Col>
+        <GetInTouch />
       </Space>
     </>
   );

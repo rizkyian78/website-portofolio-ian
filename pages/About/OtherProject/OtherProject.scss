@@ -15,9 +15,11 @@
 
 #projectDescription {
   color: $lightest-stale;
+  margin-bottom: 130px;
 }
 
 #projectTool {
+  text-align: center;
   color: $slate;
 }
 
@@ -25,9 +27,13 @@
   background-color: $light-navy;
   border-radius: 10px;
   border-color: transparent;
+  height: 100%;
   transition: margin-top 0.4s;
   &:hover {
-    margin-top: -15px;
+    margin-top: -10px;
     transition-timing-function: ease-out;
+    #title {
+      color: $green;
+    }
   }
 }

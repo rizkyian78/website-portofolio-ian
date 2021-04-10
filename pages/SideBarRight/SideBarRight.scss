@@ -1,6 +1,9 @@
 @import '../SideBarLeft/SideBarLeft.scss';
 
-.main {
-  color: aliceblue;
+#mata {
   writing-mode: vertical-lr;
+  color: $lightest-stale;
+  &:hover {
+    color: $green;
+  }
 }

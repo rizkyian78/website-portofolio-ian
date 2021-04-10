@@ -9,74 +9,49 @@ import anime, { AnimeInstance } from 'animejs';
 // import 'antd/dist/antd.css';
 
 export default function SideBarLeft() {
-  const handleClick = (data) => {
-    setTimeout(() => {
-      anime({
-        targets: `#${data}`,
-        rotate: 360,
-        duration: 3,
-      });
-    }, 100);
-  };
   return (
     <>
-      <Affix offsetTop={400} style={{ width: 10 }}>
-        <Space className={[style.main].join(' ')} direction="vertical">
+      <Affix offsetTop={400} style={{ marginLeft: 30 }}>
+        <Space direction="vertical">
           <Button
             href="https://twitter.com/rizkyian1"
             type="text"
             size="small"
-            id="twitter"
+            id={style.main}
             icon={<IconTwitter />}
-            className={[style.main].join(' ')}
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={(e) => handleClick('twitter')}
           />
+          <br />
           <Button
             href="https://www.instagram.com/rizkyian5719"
             type="text"
-            id="instagram"
+            id={style.main}
             size="small"
             icon={<IconInstagram />}
-            className={[style.main].join(' ')}
             target="_blank"
             rel="noopener noreferrer"
             style={{ marginBottom: 10 }}
-            onMouseEnter={(e) => handleClick('instagram')}
-          />
+          />{' '}
+          <br />
           <Button
             href="https://twitter.com/rizkyian1"
             type="text"
             size="small"
-            id="linkedin"
+            id={style.main}
             icon={<IconLinkedin />}
-            className={[style.main].join(' ')}
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={(e) => handleClick('linkedin')}
           />
+          <br />
           <Button
             href="https://twitter.com/rizkyian1"
             type="text"
             size="small"
-            id="github"
+            id={style.main}
             icon={<IconGithub />}
-            className={[style.main].join(' ')}
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={(e) => handleClick('github')}
-          />
-          <Button
-            href="https://twitter.com/rizkyian1"
-            type="text"
-            size="small"
-            id="github"
-            icon={<IconGithub />}
-            className={[style.main].join(' ')}
-            target="_blank"
-            rel="noopener noreferrer"
-            onMouseEnter={(e) => handleClick('github')}
           />
         </Space>
       </Affix>
