@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Rizky Ian Indiarto || Political Graduate</title>
         <meta name="description" content="Rizky Ian Indiarto" />
+        <title>Rizky Ian Indiarto || Political Graduate</title>
         <link rel="icon" href="/deerHead.png" />
       </Head>
       <Header />
