@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Head>
         <title>Rizky Ian Indiarto || Political Graduate</title>
-        <meta name="description" content="mbut" />
+        <meta name="description" content="Rizky Ian Indiarto" />
         <link rel="icon" href="/deerHead.png" />
       </Head>
       <Header />
