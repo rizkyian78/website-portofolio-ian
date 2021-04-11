@@ -27,6 +27,7 @@ export default function Project() {
             id={style.image}
             height={400}
             width={600}
+            alt="website-portofolio-ian"
             style={{ borderRadius: 5 }}
           />
         </Typography.Link>
@@ -112,6 +113,7 @@ export default function Project() {
           <Image
             src="thon-house.png"
             preview={false}
+            alt="thon house"
             id={style.image}
             height={400}
             width={600}
@@ -131,6 +133,7 @@ export default function Project() {
             id={style.image}
             height={400}
             width={600}
+            alt="project tracker"
             style={{ borderRadius: 5 }}
           />
         </Typography.Link>

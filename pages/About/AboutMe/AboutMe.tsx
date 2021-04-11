@@ -97,6 +97,7 @@ export default function AboutMe() {
           id={style.image}
           height={300}
           width={300}
+          alt="rizky ian indiarto"
           src="/profile.jpeg"
         />
         <Card

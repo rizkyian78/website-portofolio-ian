@@ -13,7 +13,9 @@ export default function OtherProject() {
         <Title id={style.title} level={2}>
           Other Noteworthy Projects
         </Title>
-        <Link id={style.archive}>View Archive</Link>
+        <Link href="https://rizky-ian.vercel.app/" id={style.archive}>
+          View Archive
+        </Link>
         <Row
           gutter={[16, 16]}
           justify="center"

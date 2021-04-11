@@ -12,6 +12,7 @@ export default function Header() {
           height={75}
           width={75}
           draggable="false"
+          alt="rizky ian indiarto"
           src="https://images.vexels.com/media/users/3/191582/isolated/preview/23b7f3d8fe83689a16dbf1ff139c7a89-deer-head-drawn-by-vexels.png"
         />
         <Menu
