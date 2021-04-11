@@ -5,7 +5,7 @@ import IconLinkedin from '../components/icons/linkedin';
 import IconGithub from '../components/icons/github';
 import { Button, Space, Affix } from 'antd';
 import React from 'react';
-import anime, { AnimeInstance } from 'animejs';
+import Fade from 'react-reveal/Fade';
 // import 'antd/dist/antd.css';
 
 export default function SideBarLeft() {
@@ -13,46 +13,54 @@ export default function SideBarLeft() {
     <>
       <Affix offsetTop={400} style={{ marginLeft: 30 }}>
         <Space direction="vertical">
-          <Button
-            href="https://twitter.com/rizkyian1"
-            type="text"
-            size="small"
-            id={style.main}
-            icon={<IconTwitter />}
-            target="_blank"
-            rel="noopener noreferrer"
-          />
+          <Fade bottom cascade delay={150 * 1}>
+            <Button
+              href="https://twitter.com/rizkyian1"
+              type="text"
+              size="small"
+              id={style.main}
+              icon={<IconTwitter />}
+              target="_blank"
+              rel="noopener noreferrer"
+            />
+          </Fade>
           <br />
-          <Button
-            href="https://www.instagram.com/rizkyian5719"
-            type="text"
-            id={style.main}
-            size="small"
-            icon={<IconInstagram />}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ marginBottom: 10 }}
-          />{' '}
+          <Fade bottom cascade delay={150 * 2}>
+            <Button
+              href="https://www.instagram.com/rizkyian5719"
+              type="text"
+              id={style.main}
+              size="small"
+              icon={<IconInstagram />}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginBottom: 10 }}
+            />
+          </Fade>
           <br />
-          <Button
-            href="https://twitter.com/rizkyian1"
-            type="text"
-            size="small"
-            id={style.main}
-            icon={<IconLinkedin />}
-            target="_blank"
-            rel="noopener noreferrer"
-          />
+          <Fade bottom cascade delay={150 * 3}>
+            <Button
+              href="https://twitter.com/rizkyian1"
+              type="text"
+              size="small"
+              id={style.main}
+              icon={<IconLinkedin />}
+              target="_blank"
+              rel="noopener noreferrer"
+            />
+          </Fade>
           <br />
-          <Button
-            href="https://twitter.com/rizkyian1"
-            type="text"
-            size="small"
-            id={style.main}
-            icon={<IconGithub />}
-            target="_blank"
-            rel="noopener noreferrer"
-          />
+          <Fade bottom cascade delay={150 * 3}>
+            <Button
+              href="https://twitter.com/rizkyian1"
+              type="text"
+              size="small"
+              id={style.main}
+              icon={<IconGithub />}
+              target="_blank"
+              rel="noopener noreferrer"
+            />
+          </Fade>
         </Space>
       </Affix>
     </>

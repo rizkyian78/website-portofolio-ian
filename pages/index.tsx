@@ -5,6 +5,8 @@ import SideBarRight from './SideBarRight/SideBarRight';
 import Head from 'next/head';
 import { Row } from 'antd';
 
+import Fade from 'react-reveal/Fade';
+
 export default function Home() {
   return (
     <>
@@ -37,7 +39,9 @@ export default function Home() {
       <Header />
       <Row justify="space-between" style={{ maxWidth: '100%' }}>
         <SideBarLeft />
-        <About />
+        <Fade delay={150 * 5}>
+          <About />
+        </Fade>
         <SideBarRight />
       </Row>
     </>

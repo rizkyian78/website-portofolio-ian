@@ -2,6 +2,7 @@ import style from '../styles/Home.module.scss';
 import '../styles/globals.scss';
 
 import { Menu, Button, Row, Typography } from 'antd';
+import Fade from 'react-reveal/Fade';
 
 export default function Header() {
   return (
@@ -24,39 +25,49 @@ export default function Header() {
           }}
         >
           <Menu.Item key="1" className="a">
-            <Typography className={style.main}>
-              <span className={style.spanModule}>01.</span> About
-            </Typography>
+            <Fade top cascade delay={150 * 1}>
+              <Typography className={style.main}>
+                <span className={style.spanModule}>01.</span> About
+              </Typography>
+            </Fade>
           </Menu.Item>
           <Menu.Item key="2">
-            <Typography className={style.main}>
-              <span className={style.spanModule}>02.</span> Exprience
-            </Typography>
+            <Fade top cascade delay={150 * 2}>
+              <Typography className={style.main}>
+                <span className={style.spanModule}>02.</span> Exprience
+              </Typography>
+            </Fade>
           </Menu.Item>
           <Menu.Item key="3">
-            <Typography className={style.main}>
-              <span className={style.spanModule}>03.</span> Work
-            </Typography>
+            <Fade top cascade delay={150 * 3}>
+              <Typography className={style.main}>
+                <span className={style.spanModule}>03.</span> Work
+              </Typography>
+            </Fade>
           </Menu.Item>
           <Menu.Item key="4">
-            <Typography className={style.main}>
-              <span className={style.spanModule}>04.</span> Contact
-            </Typography>
+            <Fade top cascade delay={150 * 4}>
+              <Typography className={style.main}>
+                <span className={style.spanModule}>04.</span> Contact
+              </Typography>
+            </Fade>
           </Menu.Item>
           <Menu.Item key="resume">
-            <Button
-              type="ghost"
-              style={{
-                color: '#64ffda',
-                fontSize: 13,
-                borderColor: '#64ffda',
-              }}
-              href="https://docs.google.com/document/d/1o3GQXNCld-RsJ9f9Uca0Cny3zzFGQZjQULE_S8OgRZ8/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </Button>
+            <Fade top cascade delay={150 * 5}>
+              <Button
+                type="ghost"
+                style={{
+                  color: '#64ffda',
+                  fontSize: 13,
+                  borderColor: '#64ffda',
+                }}
+                href="https://docs.google.com/document/d/1o3GQXNCld-RsJ9f9Uca0Cny3zzFGQZjQULE_S8OgRZ8/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </Button>
+            </Fade>
           </Menu.Item>
         </Menu>
       </Row>
