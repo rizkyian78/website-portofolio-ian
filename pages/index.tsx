@@ -9,18 +9,22 @@ export default function Home() {
   return (
     <>
       <Head>
+        <html lang="en" />
         <title>Rizky Ian Indiarto || Political Graduate</title>
         <link rel="icon" href="/deerHead.png" />
-        <meta name="title" content="rizky ian indiarto" />
-        <meta name="description" content="rizky ian indiarto" />
-        <meta property="og:type" content="website" />
+        <meta name="title" content="Rizky Ian Indiarto" />
         <meta
-          property="og:url"
-          content="https://website-portofolio-ian.vercel.app/"
+          name="description"
+          content="Rizky Ian is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences."
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rizky-ian.vercel.app/" />
         <meta property="og:title" content="rizky ian indiarto" />
         <meta property="og:description" content="rizky ian indiarto" />
-        <meta property="og:image" content="rizkyianindiarto" />
+        <meta
+          property="og:image"
+          content="https://rizky-ian.vercel.app/profile.jpeg"
+        />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://twitter.com/rizkyian1" />
         <meta property="twitter:title" content="Komba kombi" />
