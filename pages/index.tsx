@@ -13,10 +13,7 @@ export default function Home() {
         <title>Rizky Ian Indiarto</title>
         <link rel="icon" href="/deerHead.png" />
         <meta name="title" content="Rizky Ian Indiarto" />
-        <meta
-          name="description"
-          content="Rizky Ian is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences."
-        />
+        <meta name="description" content="Rizky Ian is a software engineer" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rizky-ian.vercel.app/" />
         <meta property="og:title" content="rizky ian indiarto" />
