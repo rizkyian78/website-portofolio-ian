@@ -4,10 +4,24 @@ import SideBarLeft from './SideBarLeft/SideBarLeft';
 import SideBarRight from './SideBarRight/SideBarRight';
 import Head from 'next/head';
 import { Row } from 'antd';
+import { useState, useEffect } from 'react';
+import Lottie from 'react-lottie';
+import animationData from '../public/iconLoding.json';
 
 import Fade from 'react-reveal/Fade';
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  });
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+  };
   return (
     <>
       <Head>
@@ -36,14 +50,28 @@ export default function Home() {
           content="https://twitter.com/rizkyian1/photo"
         />
       </Head>
-      <Header />
-      <Row justify="space-between" style={{ maxWidth: '100%' }}>
-        <SideBarLeft />
-        <Fade delay={150 * 5}>
-          <About />
-        </Fade>
-        <SideBarRight />
-      </Row>
+      {isLoading ? (
+        <div style={{ maxHeight: 30, minHeight: 30 }}>
+          <Lottie
+            options={defaultOptions}
+            height={400}
+            width={400}
+            isStopped={false}
+            isPaused={false}
+          />
+        </div>
+      ) : (
+        <>
+          <Header />
+          <Row justify="space-between" style={{ maxWidth: '100%' }}>
+            <SideBarLeft />
+            <Fade delay={150 * 5}>
+              <About />
+            </Fade>
+            <SideBarRight />
+          </Row>
+        </>
+      )}
     </>
   );
 }

@@ -1,6 +1,7 @@
 import { Typography, Row, Card, Col, Space, Button } from 'antd';
 import IconExternal from '../../components/icons/external';
 import IconFolder from '../../components/icons/folder';
+import Fade from 'react-reveal/Fade';
 
 import style from './OtherProject.scss';
 
@@ -10,12 +11,14 @@ export default function OtherProject() {
   return (
     <>
       <div style={{ marginTop: 200, textAlign: 'center' }}>
-        <Title id={style.title} level={2}>
-          Other Noteworthy Projects
-        </Title>
-        <Link href="https://rizky-ian.vercel.app/" id={style.archive}>
-          View Archive
-        </Link>
+        <Fade bottom cascade>
+          <Title id={style.title} level={2}>
+            Other Noteworthy Projects
+          </Title>
+          <Link href="https://rizky-ian.vercel.app/" id={style.archive}>
+            View Archive
+          </Link>
+        </Fade>
         <Row
           gutter={[16, 16]}
           justify="center"
