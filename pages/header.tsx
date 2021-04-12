@@ -61,7 +61,7 @@ export default function Header() {
                   fontSize: 13,
                   borderColor: '#64ffda',
                 }}
-                href="https://docs.google.com/document/d/1o3GQXNCld-RsJ9f9Uca0Cny3zzFGQZjQULE_S8OgRZ8/edit?usp=sharing"
+                href="/pdf/cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >

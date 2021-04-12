@@ -19,7 +19,7 @@ export default function ParagraphAbout() {
       </Typography>
       <Button
         type="ghost"
-        href="https://docs.google.com/document/d/1o3GQXNCld-RsJ9f9Uca0Cny3zzFGQZjQULE_S8OgRZ8/edit?usp=sharing"
+        href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rizkyian78@gmail.com`}
         target="_blank"
         rel="noopener noreferrer"
         id={style.buttonPDF}

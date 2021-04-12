@@ -40,7 +40,7 @@ export default function SideBarLeft() {
           <br />
           <Fade bottom cascade delay={150 * 3}>
             <Button
-              href="https://twitter.com/rizkyian1"
+              href="https://www.linkedin.com/in/rizky-ian-indiarto-123rzky/"
               type="text"
               size="small"
               id={style.main}
@@ -52,7 +52,7 @@ export default function SideBarLeft() {
           <br />
           <Fade bottom cascade delay={150 * 3}>
             <Button
-              href="https://twitter.com/rizkyian1"
+              href="https://github.com/rizkyian78"
               type="text"
               size="small"
               id={style.main}
