@@ -19,7 +19,7 @@ export default function Project() {
         <Typography.Link
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.youtube.com/watch?v=YykjpeuMNEk&list=RDdvgZkm1xWPE&index=5&ab_channel=Coldplay"
+          href="https://website-ian.firebaseapp.com/"
         >
           <Image
             src="website-portofolio-2.png"
@@ -53,7 +53,7 @@ export default function Project() {
           </Row>
           <Row justify="end">
             <Button
-              href="https://twitter.com/rizkyian1"
+              href="https://website-ian.firebaseapp.com/"
               type="text"
               size="small"
               id="github"
@@ -94,7 +94,7 @@ export default function Project() {
           </Row>
           <Row justify="start">
             <Button
-              href="https://twitter.com/rizkyian1"
+              href="https://thon-house.web.app/"
               type="text"
               size="small"
               id="github"

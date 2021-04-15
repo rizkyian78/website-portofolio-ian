@@ -196,9 +196,10 @@ export default function OtherProject() {
           href="https://docs.google.com/document/d/1o3GQXNCld-RsJ9f9Uca0Cny3zzFGQZjQULE_S8OgRZ8/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
+          style={{ width: 'auto' }}
           id={style.buttonPDF}
         >
-          Show More
+          Project Still In Progress
         </Button>
       </div>
     </>
