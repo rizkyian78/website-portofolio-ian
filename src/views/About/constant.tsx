@@ -2,6 +2,7 @@ import {
   GithubFilled,
   InstagramOutlined,
   LinkedinFilled,
+  MailFilled,
   MediumCircleFilled,
 } from '@ant-design/icons'
 
@@ -13,15 +14,47 @@ export interface IHomeData {
 }
 export const data: IHomeData[] = [
   {
-    icon: <InstagramOutlined className={cx(cssHeader.icon)} />,
+    icon: (
+      <a
+        href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rizkyian78@gmail.com`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <MailFilled className={cx(cssHeader.icon)} />
+      </a>
+    ),
   },
   {
-    icon: <MediumCircleFilled className={cx(cssHeader.icon)} />,
+    icon: (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://medium.com/@rizkyian78"
+      >
+        <MediumCircleFilled className={cx(cssHeader.icon)} />
+      </a>
+    ),
   },
   {
-    icon: <GithubFilled className={cx(cssHeader.icon)} />,
+    icon: (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/rizkyian78"
+      >
+        <GithubFilled className={cx(cssHeader.icon)} />
+      </a>
+    ),
   },
   {
-    icon: <LinkedinFilled className={cx(cssHeader.icon)} />,
+    icon: (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.linkedin.com/in/rizky-ian-indiarto-123rzky/"
+      >
+        <LinkedinFilled className={cx(cssHeader.icon)} />
+      </a>
+    ),
   },
 ]
