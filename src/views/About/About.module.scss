@@ -1,0 +1,58 @@
+@import '../../@nexys/variable.scss';
+
+.name {
+  color: $slate !important;
+  font-size: 3rem !important;
+  margin-bottom: 1px !important;
+}
+
+.role {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    --tw-text-opacity: 1;
+    color: $lightest-stale;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.icon {
+  font-size: 2rem;
+  color: $lightest-stale;
+  cursor: pointer;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+
+.description {
+  max-width: 20rem;
+  line-height: 1.5;
+  color: $light-slate;
+}
+
+
+.aboutMe {
+  color: $light-slate;
+  line-height: 1.5;
+  min-width: 35rem;
+  text-align: justify;
+  padding-bottom: 100px;
+}
+
+.iconArrow {
+  font-size: 1rem;
+  color: $lightest-stale;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.3s ease-in-out;
+
+}
+.anchor {
+  margin-bottom: 300;
+}
+.anchor:hover {
+    .iconArrow {
+      transform: translate(80%, 0%)
+  }
+
+}

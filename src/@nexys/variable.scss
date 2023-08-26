@@ -1,0 +1,17 @@
+$primary-color: rgb(148 163 184/var(--tw-text-opacity));
+$lightest-stale: #ccd6f6;
+$green: #64ffda;
+$slate: #e2e8f0;
+$light-slate: #8892b0;
+$light-navy: #112240;
+$transparent-color: rgba(148,163,184,0.1);
+
+
+
+// Fonts
+$font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
+  sans-serif;
+$font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+
+// Transition
+$transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);

@@ -1,0 +1,28 @@
+@import '../../@nexys/variable.scss';
+
+.archiveAnchor {
+    font-size: 21px;
+    line-height: 1.25;
+    font-weight: 600;
+    color: $green !important;
+    background-color: transparent !important;
+    margin-top: -6;
+    margin-bottom: 0.5rem;
+    flex: 'inline';
+    text-align: 'start';
+
+}
+
+
+.buttonBack {
+    color: $green !important;
+    margin-bottom: -7px;
+    transition: transform 0.3s ease-in-out !important;
+}
+
+.archiveAnchor:hover {
+    .buttonBack {
+      transform: translate(-80%, 0%)
+  }
+}
+

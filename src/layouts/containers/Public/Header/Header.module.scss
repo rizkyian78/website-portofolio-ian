@@ -1,0 +1,34 @@
+$primary-color: #0a192f;
+$lightest-stale: #ccd6f6;
+$green: #64ffda;
+$slate: #8892b0;
+$light-navy: #112240;
+
+// Fonts
+$font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
+  sans-serif;
+$font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+
+// Transition
+$transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+
+.main {
+  color: $lightest-stale;
+  &:hover {
+    color: $green;
+    &:focus {
+      color: $green;
+    }
+  }
+}
+
+.ant-menu-submenu-selected {
+  border-bottom: 0;
+}
+
+.spanModule {
+  color: #64ffda !important;
+}
+
+

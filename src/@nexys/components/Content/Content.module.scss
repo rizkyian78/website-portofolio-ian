@@ -1,0 +1,18 @@
+$max-width: 960px;
+$xs: 576px;
+
+@mixin xs {
+  @media (max-width: #{$xs}) {
+    @content;
+  }
+}
+.section {
+  max-width: $max-width;
+  margin: auto;
+  transition: all 0.2s;
+
+  padding: 0 16px;
+  @include xs {
+    padding: 0 24px;
+  }
+}
