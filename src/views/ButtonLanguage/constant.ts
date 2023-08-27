@@ -1,5 +1,8 @@
+import { CSSProperties } from 'react'
+
 export interface IButtonLanguage {
   name: string
+  style?: CSSProperties
 }
 
 export const brankasStack: IButtonLanguage[] = [

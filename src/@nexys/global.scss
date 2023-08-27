@@ -3,13 +3,24 @@
 
 
 body {
-  background: #0a192f !important;
+  background: $background-color !important;
   padding: 0;
   margin: 0;
   font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace !important;
   background-color: $primary-color;
   height: 1000px;
   
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border-bottom: 1px solid $transparent-color;
+  text-align: left;
+  padding: 8px;
 }
 
 

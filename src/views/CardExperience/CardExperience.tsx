@@ -26,6 +26,7 @@ function CardExperience() {
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
+          width: '120%',
         }}
       >
         <Row
@@ -127,6 +128,7 @@ function CardExperience() {
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
+          width: '120%',
         }}
         onClick={() => {
           window.open('https://ndp.nusantech.com/program')
@@ -197,6 +199,7 @@ function CardExperience() {
         }}
         style={{
           marginBottom: 30,
+          width: '120%',
         }}
       >
         <Row
@@ -297,6 +300,7 @@ function CardExperience() {
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
+          width: '120%',
         }}
         onClick={() => {
           window.open('https://ndp.nusantech.com/program')

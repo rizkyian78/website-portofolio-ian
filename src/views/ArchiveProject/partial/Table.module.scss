@@ -1,0 +1,62 @@
+@import '../../../@nexys/variable.scss';
+
+.title {
+    font-size: 14px;
+    color: $slate;
+    padding: 16px 32px 16px 1px;
+}
+
+.year {
+    color: $selected-word;
+    font-size: 14px;
+}
+
+.project {
+    color: $slate;
+    font-size: 16px;
+}
+.madeAt {
+    color: $selected-word;
+    font-size: 14px;
+}
+.link {
+   
+}
+
+.textTo {
+    color: $selected-word;
+    font-size: 14px;
+}
+.iconLink {
+    font-size: 1px;
+    color: $lightest-stale;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: -30px !important;
+    font-weight: 500;
+    transition: transform 0.3s ease-in-out !important;
+  }
+
+.iconGithub {
+    font-size: 1px;
+    color: $lightest-stale;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: -30px !important;
+    font-weight: 500;
+}
+
+.link:hover {
+    color: $green;
+    .textTo {
+        color: $green;
+    }
+    .iconGithub {
+        color: $green;
+    }
+    .iconLink {
+      transform: translate(20%, -30%) !important;
+      color: $green
+  }
+
+}

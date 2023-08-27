@@ -3,16 +3,25 @@
 .archiveAnchor {
     font-size: 21px;
     line-height: 1.25;
-    font-weight: 600;
+    // font-weight: 600;
     color: $green !important;
     background-color: transparent !important;
     margin-top: -6;
     margin-bottom: 0.5rem;
     flex: 'inline';
     text-align: 'start';
-
+    
 }
 
+.allProjectTitle {
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -.025rem;
+    color: $slate;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-weight: bolder;
+}
 
 .buttonBack {
     color: $green !important;
@@ -26,3 +35,6 @@
   }
 }
 
+.ant-table-container {
+    background-color: black !important;
+}

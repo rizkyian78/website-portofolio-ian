@@ -95,7 +95,7 @@ export default function Home(): React.JSX.Element {
               <ArrowRightOutlined className={cx(cssHeader.iconArrow)} />
             </a>
           </Col>
-          {/* <a className={cx(cssHeader.anchor)} href="/archives">
+          <a className={cx(cssHeader.anchor)} href="/archives">
             <span
               className={cx(cssHeader.description)}
               style={{
@@ -106,7 +106,7 @@ export default function Home(): React.JSX.Element {
               View Full Project Archive
             </span>
             <ArrowRightOutlined className={cx(cssHeader.iconArrow)} />
-          </a> */}
+          </a>
         </Col>
       </Row>
     </>
