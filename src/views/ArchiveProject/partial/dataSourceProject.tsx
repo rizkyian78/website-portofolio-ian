@@ -18,6 +18,33 @@ export const pertaminVMI: IButtonLanguage[] = [
   },
 ]
 
+export const nusaLmsStack: IButtonLanguage[] = [
+  {
+    name: 'Next',
+  },
+  {
+    name: 'MySql',
+  },
+  {
+    name: 'AWS',
+  },
+  {
+    name: 'Typescript',
+  },
+  {
+    name: 'Express',
+  },
+  {
+    name: 'Kubernetes',
+  },
+  {
+    name: 'Docker',
+  },
+  {
+    name: 'Gitlab Pipeline',
+  },
+]
+
 export const brankasStack: IButtonLanguage[] = [
   {
     name: 'React',
@@ -39,6 +66,27 @@ export const brankasStack: IButtonLanguage[] = [
   },
   {
     name: 'Typescript',
+  },
+  {
+    name: 'PostgreSQL',
+  },
+  {
+    name: 'Prometheus',
+  },
+  {
+    name: 'Grafana',
+  },
+  {
+    name: 'Loki',
+  },
+  {
+    name: 'Fluentd',
+  },
+  {
+    name: 'SFTP',
+  },
+  {
+    name: 'Loopback 4',
   },
 ]
 
@@ -75,5 +123,26 @@ export const restApiTemplateStack: IButtonLanguage[] = [
 
   {
     name: 'Amazon Container Registry',
+  },
+  {
+    name: 'SMTP Gmail',
+  },
+]
+
+export const telkomNeucentrixStack: IButtonLanguage[] = [
+  {
+    name: 'Fastify',
+  },
+  {
+    name: 'Javascript',
+  },
+  {
+    name: 'Microfrontend',
+  },
+  {
+    name: 'Gitlab',
+  },
+  {
+    name: 'Jest',
   },
 ]

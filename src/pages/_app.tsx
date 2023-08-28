@@ -7,11 +7,11 @@ import useNProgress from '@nexys/hooks/useNProgress/useNProgress'
 import useRefreshStyle from '@nexys/hooks/useRefreshStyle/useRefreshStyle'
 // import useLoadingPage from 'hooks/useLoadingPage/useLoadingPage'
 
-const title = 'Nexys'
-const description = 'Nexys Boilerplate By Chornos13'
-const metaURL = 'https://github.com/chornos13'
-const metaImage = '/static/logo.png'
-const webIconURL = '/static/favicon.ico'
+const title = 'Rizky Ian Indiarto'
+const description = 'Website Portofolio | Rizky Ian Indiarto'
+const metaURL = 'https://github.com/rizkyian78'
+const metaImage = '/static/ri.svg'
+const webIconURL = '/static/ri.svg'
 
 function App(props: AppProps) {
   useNProgress()

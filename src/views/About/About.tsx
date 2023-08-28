@@ -105,7 +105,12 @@ export default function Home(): React.JSX.Element {
             >
               View Full Project Archive
             </span>
-            <ArrowRightOutlined className={cx(cssHeader.iconArrow)} />
+            <ArrowRightOutlined
+              style={{
+                marginBottom: 300,
+              }}
+              className={cx(cssHeader.iconArrow)}
+            />
           </a>
         </Col>
       </Row>

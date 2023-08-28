@@ -1,3 +1,3 @@
-import Home from 'views/About/About'
+import About from 'views/About/About'
 
-export default Home
+export default About

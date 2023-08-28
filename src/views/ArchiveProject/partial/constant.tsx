@@ -4,8 +4,10 @@ import cssHeader from './Table.module.scss'
 import { Button, Row, Typography, Col } from 'antd'
 import {
   brankasStack,
+  nusaLmsStack,
   pertaminVMI,
   restApiTemplateStack,
+  telkomNeucentrixStack,
 } from './dataSourceProject'
 import ButtonLanguage from 'views/ButtonLanguage/ButtonLanguage'
 import { IButtonLanguage } from 'views/ButtonLanguage/constant'
@@ -95,7 +97,7 @@ export const columns = [
 export const data: IDataTable[] = [
   {
     year: '2021',
-    project: 'Yokke Payment Gateway',
+    project: 'Internet Payment Gateway',
     madeAt: 'Brankas Pte Ltd',
     builtWith: brankasStack.map((v) => {
       return <ButtonLanguage name={v.name} />
@@ -104,7 +106,7 @@ export const data: IDataTable[] = [
       <LinkWeb
         name="demoprod.yokke.app"
         icon={<IconExternal />}
-        url="https://demoprod.yokke.app/"
+        url="https://mtiipg:brankasipg@demoshop.yokke.app/"
         isGitHub={false}
       />
     ),
@@ -134,9 +136,34 @@ export const data: IDataTable[] = [
     }),
     link: (
       <LinkWeb
-        name="vmi.e-logisticruiv.com"
+        name="directbuying.e-logisticruiv.com"
         icon={<IconExternal />}
-        url="https://vmi.e-logisticruiv.com/"
+        url="https://directbuying.e-logisticruiv.com/"
+        isGitHub={false}
+      />
+    ),
+  },
+  {
+    year: '2021',
+    project: 'Telkom Neucentrix',
+    madeAt: 'Nusantech',
+    builtWith: telkomNeucentrixStack.map((v) => {
+      return <ButtonLanguage name={v.name} />
+    }),
+    link: <></>,
+  },
+  {
+    year: '2022',
+    project: 'Nusa LMS',
+    madeAt: 'Nusantech',
+    builtWith: nusaLmsStack.map((v) => {
+      return <ButtonLanguage name={v.name} />
+    }),
+    link: (
+      <LinkWeb
+        name="app.nusalms.com"
+        icon={<IconExternal />}
+        url="https://app.nusalms.com/login/"
         isGitHub={false}
       />
     ),
