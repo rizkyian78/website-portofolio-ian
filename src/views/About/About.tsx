@@ -13,7 +13,7 @@ import { useMediaQuery } from 'react-responsive'
 
 export default function Home(): React.JSX.Element {
   const isPhone = useMediaQuery({
-    query: '(max-width: 600px)',
+    query: '(max-width: 800px)',
   })
   return (
     <>

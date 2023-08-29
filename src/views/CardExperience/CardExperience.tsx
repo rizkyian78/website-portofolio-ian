@@ -21,7 +21,7 @@ export interface IButtonLanguage {
 
 function CardExperience() {
   const isPhone = useMediaQuery({
-    query: '(max-width: 600px)',
+    query: '(max-width: 800px)',
   })
   return (
     <>
