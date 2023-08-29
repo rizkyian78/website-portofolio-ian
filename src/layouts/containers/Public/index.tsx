@@ -3,6 +3,7 @@ import { ReactComponentLike } from 'prop-types'
 import Header from 'layouts/containers/Public/Header'
 import Footer from 'layouts/containers/Public/Footer'
 import { BackTop } from 'antd'
+import { useMediaQuery } from 'react-responsive'
 
 interface IProps {
   Component: ReactComponentLike
@@ -10,6 +11,9 @@ interface IProps {
 }
 
 function PublicContainer(props: IProps) {
+  const isPhone = useMediaQuery({
+    query: '(max-width: 600px)',
+  })
   const { Component, pageProps } = props
   const refHeader = useRef<HTMLElement>()
   const refFooter = useRef<HTMLElement>()
@@ -28,7 +32,7 @@ function PublicContainer(props: IProps) {
       <Header refContent={refHeader} />
       <div
         style={{
-          margin: '0 6%',
+          margin: `0 ${isPhone ? '2' : '6'}%`,
         }}
       >
         <Component {...pageProps} />

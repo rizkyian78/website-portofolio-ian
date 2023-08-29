@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 // import style from './About.scss';
 import { Affix, Col, Space, Typography, Row, Button } from 'antd'
 
@@ -9,17 +9,22 @@ import CardExperience from 'views/CardExperience/CardExperience'
 import { data } from './constant'
 
 import { ArrowRightOutlined } from '@ant-design/icons'
+import { useMediaQuery } from 'react-responsive'
 
 export default function Home(): React.JSX.Element {
+  const isPhone = useMediaQuery({
+    query: '(max-width: 600px)',
+  })
   return (
     <>
       <Row>
-        <Col span={8}>
-          <Affix
-            style={{
-              position: 'fixed',
-            }}
-          >
+        <Col
+          span={isPhone ? 24 : 8}
+          style={{
+            marginBottom: isPhone ? 60 : 0,
+          }}
+        >
+          <Col className={cx(cssHeader.affixtion)}>
             <Col
               style={{
                 marginBottom: 50,
@@ -39,9 +44,13 @@ export default function Home(): React.JSX.Element {
             <Col>
               <Space direction="horizontal">{data.map((v) => v.icon)}</Space>
             </Col>
-          </Affix>
+          </Col>
         </Col>
-        <Col span={8} offset={5}>
+        <Col
+          span={8}
+          offset={isPhone ? 0 : 5}
+          className={cx(cssHeader.aboutMeCol)}
+        >
           <Typography className={cx(cssHeader.aboutMe)}>
             I am a Software Engineer, and Digital Nomad who has freelanced and
             worked full-time at startups to grow their platform businesses. As a
@@ -74,7 +83,7 @@ export default function Home(): React.JSX.Element {
             .
           </Typography>
         </Col>
-        <Col span={9} offset={13}>
+        <Col span={isPhone ? 24 : 9} offset={isPhone ? 0 : 13}>
           <CardExperience />
           <Col>
             <a

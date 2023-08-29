@@ -13,12 +13,16 @@ import {
   nusantechPartTimeStack,
 } from 'views/ButtonLanguage/constant'
 import ButtonLanguage from 'views/ButtonLanguage/ButtonLanguage'
+import { useMediaQuery } from 'react-responsive'
 
 export interface IButtonLanguage {
   name: string
 }
 
 function CardExperience() {
+  const isPhone = useMediaQuery({
+    query: '(max-width: 600px)',
+  })
   return (
     <>
       <Card
@@ -26,14 +30,14 @@ function CardExperience() {
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
-          width: '120%',
+          width: isPhone ? '95%' : '110%',
         }}
       >
         <Row
           justify="start"
           align="top"
           style={{
-            width: '120%',
+            width: isPhone ? '95%' : '110%',
             backgroundColor: 'transparent',
           }}
         >
@@ -128,7 +132,7 @@ function CardExperience() {
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
-          width: '120%',
+          width: '110%',
         }}
         onClick={() => {
           window.open('https://ndp.nusantech.com/program')
@@ -138,7 +142,7 @@ function CardExperience() {
           justify="start"
           align="top"
           style={{
-            width: '120%',
+            width: isPhone ? '95%' : '110%',
             backgroundColor: 'transparent',
           }}
         >
@@ -199,14 +203,14 @@ function CardExperience() {
         }}
         style={{
           marginBottom: 30,
-          width: '120%',
+          width: isPhone ? '95%' : '110%',
         }}
       >
         <Row
           justify="start"
           align="top"
           style={{
-            width: '120%',
+            width: isPhone ? '95%' : '110%',
             backgroundColor: 'transparent',
           }}
         >
@@ -300,7 +304,7 @@ function CardExperience() {
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
-          width: '120%',
+          width: isPhone ? '95%' : '110%',
         }}
         onClick={() => {
           window.open('https://ndp.nusantech.com/program')
@@ -310,7 +314,7 @@ function CardExperience() {
           justify="start"
           align="top"
           style={{
-            width: '120%',
+            width: isPhone ? '95%' : '110%',
             backgroundColor: 'transparent',
           }}
         >

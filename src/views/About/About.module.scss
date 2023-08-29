@@ -1,5 +1,9 @@
 @import '../../@nexys/variable.scss';
 
+
+.affixtion {
+  position: fixed;
+}
 .name {
   color: $slate !important;
   font-size: 3rem !important;
@@ -54,5 +58,16 @@
     .iconArrow {
       transform: translate(80%, 0%)
   }
+}
 
+@media only screen and (max-width: 600px) {
+  /* For tablets: */
+.affixtion {
+  position: unset !important;
+  max-width: 100% !important;
+}
+
+.h1.ant-typography, .ant-typography h1 {
+  font-size: 1px !important;
+}
 }
