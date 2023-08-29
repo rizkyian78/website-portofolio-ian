@@ -60,11 +60,10 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   /* For tablets: */
 .affixtion {
   position: unset !important;
-  max-width: 100% !important;
 }
 
 .h1.ant-typography, .ant-typography h1 {

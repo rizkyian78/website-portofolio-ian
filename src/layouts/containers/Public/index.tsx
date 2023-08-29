@@ -12,7 +12,7 @@ interface IProps {
 
 function PublicContainer(props: IProps) {
   const isPhone = useMediaQuery({
-    query: '(max-width: 800px)',
+    query: '(max-width: 900px)',
   })
   const { Component, pageProps } = props
   const refHeader = useRef<HTMLElement>()
