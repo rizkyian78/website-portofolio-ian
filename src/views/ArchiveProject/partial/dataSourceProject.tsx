@@ -1,6 +1,24 @@
 import { IButtonLanguage } from 'views/ButtonLanguage/constant'
 
-export const pertaminVMI: IButtonLanguage[] = [
+export const pertaminDirectBuying: IButtonLanguage[] = [
+  {
+    name: 'React',
+  },
+  {
+    name: 'Mongo',
+  },
+  {
+    name: 'AWS',
+  },
+  {
+    name: 'Javascript',
+  },
+  {
+    name: 'Express',
+  },
+]
+
+export const pertaminaVMI: IButtonLanguage[] = [
   {
     name: 'Next',
   },

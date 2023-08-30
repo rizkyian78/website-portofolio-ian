@@ -1,16 +1,15 @@
-import { Column } from 'react-table-6'
 import cx from 'classnames'
 import cssHeader from './Table.module.scss'
 import { Button, Row, Typography, Col } from 'antd'
 import {
   brankasStack,
   nusaLmsStack,
-  pertaminVMI,
+  pertaminDirectBuying,
+  pertaminaVMI,
   restApiTemplateStack,
   telkomNeucentrixStack,
 } from './dataSourceProject'
 import ButtonLanguage from 'views/ButtonLanguage/ButtonLanguage'
-import { IButtonLanguage } from 'views/ButtonLanguage/constant'
 import IconExternal from '@nexys/components/Icon/external'
 import { GithubFilled } from '@ant-design/icons'
 
@@ -131,7 +130,7 @@ export const data: IDataTable[] = [
     year: '2020',
     project: 'Pertamina Direct Buying',
     madeAt: 'Nusantech',
-    builtWith: pertaminVMI.map((v) => {
+    builtWith: pertaminDirectBuying.map((v) => {
       return <ButtonLanguage name={v.name} />
     }),
     link: (
@@ -139,6 +138,22 @@ export const data: IDataTable[] = [
         name="directbuying.e-logisticruiv.com"
         icon={<IconExternal />}
         url="https://directbuying.e-logisticruiv.com/"
+        isGitHub={false}
+      />
+    ),
+  },
+  {
+    year: '2020',
+    project: 'Pertamina VMI',
+    madeAt: 'Nusantech',
+    builtWith: pertaminaVMI.map((v) => {
+      return <ButtonLanguage name={v.name} />
+    }),
+    link: (
+      <LinkWeb
+        name="vmi.e-logisticruiv.com"
+        icon={<IconExternal />}
+        url="https://vmi.e-logisticruiv.com/"
         isGitHub={false}
       />
     ),
