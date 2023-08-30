@@ -26,7 +26,7 @@ function CardExperience() {
   return (
     <>
       <Card
-        hoverable
+        hoverable={isPhone ? false : true}
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
@@ -128,7 +128,7 @@ function CardExperience() {
         </Row>
       </Card>{' '}
       <Card
-        hoverable
+        hoverable={isPhone ? false : true}
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
@@ -196,7 +196,7 @@ function CardExperience() {
         </Row>
       </Card>
       <Card
-        hoverable
+        hoverable={isPhone ? false : true}
         className={cx(cssHeader.cardHover)}
         onClick={() => {
           window.open('https://nusantech.com/')
@@ -300,7 +300,7 @@ function CardExperience() {
         </Row>
       </Card>
       <Card
-        hoverable
+        hoverable={isPhone ? false : true}
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
