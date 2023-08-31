@@ -164,3 +164,12 @@ export const telkomNeucentrixStack: IButtonLanguage[] = [
     name: 'Jest',
   },
 ]
+
+export const windowsWeatherApp: IButtonLanguage[] = [
+  {
+    name: 'Flutter',
+  },
+  {
+    name: 'Firebase',
+  },
+]

@@ -8,6 +8,7 @@ import {
   pertaminaVMI,
   restApiTemplateStack,
   telkomNeucentrixStack,
+  windowsWeatherApp,
 } from './dataSourceProject'
 import ButtonLanguage from 'views/ButtonLanguage/ButtonLanguage'
 import IconExternal from '@nexys/components/Icon/external'
@@ -127,6 +128,15 @@ export const data: IDataTable[] = [
     ),
   },
   {
+    year: '2021',
+    project: 'Weather App Deskto',
+    madeAt: 'Brankas Pte Ltd',
+    builtWith: windowsWeatherApp.map((v) => {
+      return <ButtonLanguage name={v.name} />
+    }),
+    link: <></>,
+  },
+  {
     year: '2020',
     project: 'Pertamina Direct Buying',
     madeAt: 'Nusantech',
@@ -168,7 +178,7 @@ export const data: IDataTable[] = [
     link: <></>,
   },
   {
-    year: '2022',
+    year: '2021',
     project: 'Nusa LMS',
     madeAt: 'Nusantech',
     builtWith: nusaLmsStack.map((v) => {
