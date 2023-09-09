@@ -30,14 +30,13 @@ function CardExperience() {
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
-          width: isPhone ? '95%' : '110%',
         }}
       >
         <Row
           justify="start"
           align="top"
+          className={cx(cssHeader.rowWidth)}
           style={{
-            width: isPhone ? '95%' : '110%',
             backgroundColor: 'transparent',
           }}
         >
@@ -132,7 +131,6 @@ function CardExperience() {
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
-          width: '110%',
         }}
         onClick={() => {
           window.open('https://ndp.nusantech.com/program')
@@ -141,8 +139,8 @@ function CardExperience() {
         <Row
           justify="start"
           align="top"
+          className={cx(cssHeader.rowWidth)}
           style={{
-            width: isPhone ? '95%' : '110%',
             backgroundColor: 'transparent',
           }}
         >
@@ -203,14 +201,13 @@ function CardExperience() {
         }}
         style={{
           marginBottom: 30,
-          width: isPhone ? '95%' : '110%',
         }}
       >
         <Row
           justify="start"
           align="top"
+          className={cx(cssHeader.rowWidth)}
           style={{
-            width: isPhone ? '95%' : '110%',
             backgroundColor: 'transparent',
           }}
         >
@@ -304,7 +301,6 @@ function CardExperience() {
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
-          width: isPhone ? '95%' : '110%',
         }}
         onClick={() => {
           window.open('https://ndp.nusantech.com/program')
@@ -313,8 +309,8 @@ function CardExperience() {
         <Row
           justify="start"
           align="top"
+          className={cx(cssHeader.rowWidth)}
           style={{
-            width: isPhone ? '95%' : '110%',
             backgroundColor: 'transparent',
           }}
         >

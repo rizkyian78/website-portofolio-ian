@@ -165,11 +165,14 @@ export const telkomNeucentrixStack: IButtonLanguage[] = [
   },
 ]
 
-export const windowsWeatherApp: IButtonLanguage[] = [
+export const twitterCloneStack: IButtonLanguage[] = [
   {
     name: 'Flutter',
   },
   {
-    name: 'Firebase',
+    name: 'Appwrite',
+  },
+  {
+    name: 'Riverpod',
   },
 ]

@@ -10,6 +10,7 @@ import { data } from './constant'
 
 import { ArrowRightOutlined } from '@ant-design/icons'
 import { useMediaQuery } from 'react-responsive'
+import { isMobile } from 'services/resizeColumn'
 
 export default function Home(): React.JSX.Element {
   const isPhone = useMediaQuery({
@@ -19,10 +20,10 @@ export default function Home(): React.JSX.Element {
     <>
       <Row>
         <Col
-          span={isPhone ? 24 : 8}
-          style={{
-            marginBottom: isPhone ? 60 : 0,
-          }}
+          xs={{ span: 24 }} // Extra small screens (less than 576px)
+          sm={{ span: 12 }} // Small screens (576px and up)
+          md={{ span: 8 }} // Medium screens (768px and up)
+          className={cx(cssHeader.colMargin)}
         >
           <Col className={cx(cssHeader.affixtion)}>
             <Col
@@ -47,7 +48,9 @@ export default function Home(): React.JSX.Element {
           </Col>
         </Col>
         <Col
-          span={8}
+          xs={{ span: 24, offset: 0 }} // Extra small screens (less than 576px)
+          sm={{ span: 12, offset: 0 }} // Small screens (576px and up)
+          md={{ span: 8, offset: 5 }}
           offset={isPhone ? 0 : 5}
           className={cx(cssHeader.aboutMeCol)}
         >
@@ -83,7 +86,12 @@ export default function Home(): React.JSX.Element {
             .
           </Typography>
         </Col>
-        <Col span={isPhone ? 24 : 9} offset={isPhone ? 0 : 13}>
+        <Col
+          xs={{ span: 24, offset: 0 }} // Extra small screens (less than 576px)
+          sm={{ span: 12, offset: 0 }} // Small screens (576px and up)
+          md={{ span: 9, offset: 13 }}
+          // offset={isPhone ? 0 : 13}
+        >
           <CardExperience />
           <Col>
             <a

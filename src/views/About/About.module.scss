@@ -60,10 +60,17 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+.colMargin {
+  margin-bottom: 0px !important;
+}
+
+@media only screen and (max-width: 1000px) {
   /* For tablets: */
 .affixtion {
   position: unset !important;
+}
+.colMargin {
+  margin-bottom: 60px !important;
 }
 
 .h1.ant-typography, .ant-typography h1 {

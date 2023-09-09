@@ -8,7 +8,7 @@ import {
   pertaminaVMI,
   restApiTemplateStack,
   telkomNeucentrixStack,
-  windowsWeatherApp,
+  twitterCloneStack,
 } from './dataSourceProject'
 import ButtonLanguage from 'views/ButtonLanguage/ButtonLanguage'
 import IconExternal from '@nexys/components/Icon/external'
@@ -129,9 +129,9 @@ export const data: IDataTable[] = [
   },
   {
     year: '2021',
-    project: 'Weather App Deskto',
+    project: 'Weather App Desktop',
     madeAt: 'Brankas Pte Ltd',
-    builtWith: windowsWeatherApp.map((v) => {
+    builtWith: twitterCloneStack.map((v) => {
       return <ButtonLanguage name={v.name} />
     }),
     link: <></>,

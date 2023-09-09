@@ -66,6 +66,7 @@
     "react-table-hoc-fixed-columns": "^2.3.3",
     "sass": "^1.41.1",
     "storybook-formik": "^2.1.2",
+    "use-media-antd-query": "^1.1.0",
     "webpack-filter-warnings-plugin": "^1.2.1",
     "yup": "^0.29.1"
   },
