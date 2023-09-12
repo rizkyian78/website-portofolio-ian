@@ -1,12 +1,19 @@
 @import './variable.scss';
 
+@font-face {
+  font-family: 'SFProText-Bold';
+  src: url('/fonts/SFProText/SFProText-Bold.ttf') format('truetype'),
+    url('/fonts/SFProText/SFProText-Bold.otf') format('opentype');
+  font-display: swap;
+}
+
 
 
 body {
   background: $background-color !important;
   padding: 0;
   margin: 0;
-  font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace !important;
+  // font-family: "Fira Code", "Fira Mono", "Roboto Mono", monospace !important;
   background-color: $primary-color;
   height: 1000px;
   

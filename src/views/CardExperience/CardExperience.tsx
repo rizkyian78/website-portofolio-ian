@@ -26,7 +26,7 @@ function CardExperience() {
   return (
     <>
       <Card
-        hoverable={isPhone ? false : true}
+        hoverable={false}
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
