@@ -88,6 +88,9 @@ function CardExperience() {
                 href="https://demoprod.yokke.app/"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{
+                  backgroundColor: 'transparent',
+                }}
               >
                 <LinkOutlined
                   className={cx(cssHeader.icon)}
@@ -95,13 +98,23 @@ function CardExperience() {
                     backgroundColor: 'transparent',
                   }}
                 />
-                <span className={cx(cssHeader.text)}>Yokke</span>
+                <span
+                  className={cx(cssHeader.text)}
+                  style={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  Yokke
+                </span>
               </a>
 
               <a
                 href="https://demoshop.megapay.app/"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{
+                  backgroundColor: 'transparent',
+                }}
               >
                 <LinkOutlined
                   className={cx(cssHeader.icon)}
@@ -109,7 +122,14 @@ function CardExperience() {
                     backgroundColor: 'transparent',
                   }}
                 />
-                <span className={cx(cssHeader.text)}>Bank Mega</span>
+                <span
+                  className={cx(cssHeader.text)}
+                  style={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  Bank Mega
+                </span>
               </a>
             </Space>
             <Row
@@ -156,6 +176,9 @@ function CardExperience() {
               target="_blank"
               rel="noopener noreferrer"
               className={cx(cssHeader.asRole)}
+              style={{
+                backgroundColor: 'transparent',
+              }}
             >
               Software Engineer (Part Time) · Nusantech
               <Button
@@ -256,6 +279,9 @@ function CardExperience() {
                 href="https://vmi.e-logisticruiv.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{
+                  backgroundColor: 'transparent',
+                }}
               >
                 <LinkOutlined
                   className={cx(cssHeader.icon)}
@@ -263,13 +289,23 @@ function CardExperience() {
                     backgroundColor: 'transparent',
                   }}
                 />
-                <span className={cx(cssHeader.text)}>Pertamina VMI</span>
+                <span
+                  className={cx(cssHeader.text)}
+                  style={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  Pertamina VMI
+                </span>
               </a>
 
               <a
                 href="https://directbuying.e-logisticruiv.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{
+                  backgroundColor: 'transparent',
+                }}
               >
                 <LinkOutlined
                   className={cx(cssHeader.icon)}
@@ -277,7 +313,12 @@ function CardExperience() {
                     backgroundColor: 'transparent',
                   }}
                 />
-                <span className={cx(cssHeader.text)}>
+                <span
+                  className={cx(cssHeader.text)}
+                  style={{
+                    backgroundColor: 'transparent',
+                  }}
+                >
                   Pertamina Direct Buying
                 </span>
               </a>

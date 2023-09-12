@@ -37,8 +37,15 @@
       .asRole {
         color: $green;
       }
+      .icon {
+        color: $green;
+      }
+      .text {
+        color: $green;
+        background-color: transparent;
+
+      }
     }
-  
   }
 
   .role {
@@ -107,3 +114,4 @@ margin-right: 20px;
   width: 130%;
 }
 }
+
