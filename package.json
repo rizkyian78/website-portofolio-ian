@@ -1,5 +1,5 @@
 {
-  "type": "commonjs",
+  "type": "module",
   "name": "nextjs-concept",
   "version": "2.5.0",
   "scripts": {
