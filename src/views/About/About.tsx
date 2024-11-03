@@ -35,7 +35,7 @@ export default function Home(): React.JSX.Element {
                 Rizky Ian Indiarto
               </Typography.Title>
               <Typography className={cx(cssHeader.role)}>
-                Software Engineer at Brankas Pte Ltd
+                Software Engineer
               </Typography>
               <Typography className={cx(cssHeader.description)}>
                 I build accessible, inclusive products and digital experiences

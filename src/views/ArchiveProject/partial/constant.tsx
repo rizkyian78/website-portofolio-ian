@@ -3,9 +3,11 @@ import cssHeader from './Table.module.scss'
 import { Button, Row, Typography, Col } from 'antd'
 import {
   brankasStack,
+  decisionEngineStack,
   nusaLmsStack,
   pertaminDirectBuying,
   pertaminaVMI,
+  rcmsStack,
   restApiTemplateStack,
   telkomNeucentrixStack,
   twitterCloneStack,
@@ -95,6 +97,24 @@ export const columns = [
 ]
 
 export const data: IDataTable[] = [
+  {
+    year: '2024',
+    project: 'Decision Engine',
+    madeAt: 'Bank Neo Commerce',
+    builtWith: decisionEngineStack.map((v) => {
+      return <ButtonLanguage name={v.name} />
+    }),
+    link: <></>,
+  },
+  {
+    year: '2024',
+    project: 'Risk Control Management System',
+    madeAt: 'Bank Neo Commerce',
+    builtWith: rcmsStack.map((v) => {
+      return <ButtonLanguage name={v.name} />
+    }),
+    link: <></>,
+  },
   {
     year: '2021',
     project: 'Internet Payment Gateway',

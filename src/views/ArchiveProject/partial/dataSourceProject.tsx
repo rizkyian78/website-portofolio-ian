@@ -63,6 +63,144 @@ export const nusaLmsStack: IButtonLanguage[] = [
   },
 ]
 
+export const slikCrawlerStack: IButtonLanguage[] = [
+  {
+    name: 'Python',
+  },
+  {
+    name: 'Tornado',
+  },
+
+  {
+    name: 'Redis',
+  },
+  {
+    name: 'Jenkins',
+  },
+
+  {
+    name: 'Zookeeper',
+  },
+]
+
+export const decisionEngineStack: IButtonLanguage[] = [
+  {
+    name: 'Nuxt',
+  },
+  {
+    name: 'Python',
+  },
+  {
+    name: 'Tornado',
+  },
+  {
+    name: 'Typescript',
+  },
+  {
+    name: 'Redis',
+  },
+  {
+    name: 'Jenkins',
+  },
+  {
+    name: 'Apollo',
+  },
+  {
+    name: 'RocketMQ',
+  },
+  {
+    name: 'Zookeeper',
+  },
+]
+
+export const bncStack: IButtonLanguage[] = [
+  {
+    name: 'Next',
+  },
+  {
+    name: 'Java 1.8',
+  },
+  {
+    name: 'Springboot',
+  },
+  {
+    name: 'Hibernate',
+  },
+  {
+    name: 'Angular Universal',
+  },
+  {
+    name: 'Jenkins',
+  },
+  {
+    name: 'RocketMQ',
+  },
+  {
+    name: 'Nacos',
+  },
+  {
+    name: 'DubboRPC',
+  },
+  {
+    name: 'Nuxt',
+  },
+  {
+    name: 'Python',
+  },
+  {
+    name: 'Tornado',
+  },
+  {
+    name: 'Typescript',
+  },
+  {
+    name: 'Redis',
+  },
+  {
+    name: 'Jenkins',
+  },
+  {
+    name: 'Apollo',
+  },
+
+  {
+    name: 'Zookeeper',
+  },
+]
+
+export const rcmsStack: IButtonLanguage[] = [
+  {
+    name: 'Next',
+  },
+  {
+    name: 'Java 1.8',
+  },
+  {
+    name: 'Springboot',
+  },
+  {
+    name: 'Hibernate',
+  },
+  {
+    name: 'Antd',
+  },
+  {
+    name: 'Jenkins',
+  },
+  {
+    name: 'Apollo',
+  },
+  {
+    name: 'RocketMQ',
+  },
+  {
+    name: 'Nacos',
+  },
+  {
+    name: 'DubboRPC',
+  },
+]
+
 export const brankasStack: IButtonLanguage[] = [
   {
     name: 'React',

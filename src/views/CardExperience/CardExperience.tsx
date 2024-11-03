@@ -14,6 +14,7 @@ import {
 } from 'views/ButtonLanguage/constant'
 import ButtonLanguage from 'views/ButtonLanguage/ButtonLanguage'
 import { useMediaQuery } from 'react-responsive'
+import { bncStack } from 'views/ArchiveProject/partial/dataSourceProject'
 
 export interface IButtonLanguage {
   name: string
@@ -40,7 +41,77 @@ function CardExperience() {
             backgroundColor: 'transparent',
           }}
         >
-          <Col className={cx(cssHeader.asDate)}>2021 Sept - Present</Col>
+          <Col className={cx(cssHeader.asDate)}>2024 July - Present</Col>
+          <Col
+            span={14}
+            style={{
+              background: 'transparent',
+            }}
+          >
+            <a
+              href="https://www.bankneocommerce.co.id/id/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cx(cssHeader.asRole)}
+            >
+              Software Engineer · Bank Neo Commerce
+              <Button
+                style={{
+                  backgroundColor: 'transparent',
+                }}
+                type="text"
+                size="small"
+                icon={<IconExternal className={cx(cssHeader.asButton)} />}
+              />
+            </a>
+            <br />
+            <Typography
+              className={cx(cssHeader.description)}
+              style={{
+                background: 'transparent',
+                textAlign: 'justify',
+                marginBottom: 25,
+              }}
+            >
+              I am part of the Risk Tribe at Bank Neo Commerce, where our
+              primary objective is to ensure the security and integrity of all
+              user activities and transactions. Our work includes implementing
+              advanced security measures, such as face recognition technology,
+              to accurately validate and authenticate users. This approach helps
+              us mitigate risks and enhance the reliability of our banking
+              services, maintaining trust and safety across all interactions.
+            </Typography>
+
+            <Row
+              justify="start"
+              align="stretch"
+              style={{
+                backgroundColor: 'transparent',
+              }}
+            >
+              {bncStack.map((v) => (
+                <ButtonLanguage name={v.name} />
+              ))}
+            </Row>
+          </Col>
+        </Row>
+      </Card>
+      <Card
+        hoverable={false}
+        className={cx(cssHeader.cardHover)}
+        style={{
+          marginBottom: 30,
+        }}
+      >
+        <Row
+          justify="start"
+          align="top"
+          className={cx(cssHeader.rowWidth)}
+          style={{
+            backgroundColor: 'transparent',
+          }}
+        >
+          <Col className={cx(cssHeader.asDate)}>2021 Sept - July 2024</Col>
           <Col
             span={14}
             style={{
