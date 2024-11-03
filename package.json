@@ -1,5 +1,5 @@
 {
-  "type": "module",
+  "type": "commonjs",
   "name": "nextjs-concept",
   "version": "2.5.0",
   "scripts": {
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.5",
+    "@babel/runtime": "^7.12.0",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@storybook/react": "^6.2.6",
@@ -48,6 +49,7 @@
     "lodash": "^4.17.15",
     "moment": "2.27.0",
     "next": "11.1.2",
+    "next-transpile-modules": "^10.0.1",
     "nprogress": "^0.2.0",
     "null-loader": "4.0.0",
     "path-to-regexp": "^6.2.0",
