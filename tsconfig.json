@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    "types": [
-      "glob"
-    ],
     "target": "es5",
     "lib": [
       "dom",
