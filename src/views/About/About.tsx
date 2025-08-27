@@ -1,23 +1,22 @@
-import React, { useRef } from 'react'
+import React from 'react'
 // import style from './About.scss';
-import { Affix, Col, Space, Typography, Row, Button } from 'antd'
+import { Col, Space, Typography, Row } from 'antd'
 
 import cx from 'classnames'
-import cssHeader from './About.module.scss'
 
 import CardExperience from 'views/CardExperience/CardExperience'
-import { data } from './constant'
 
 import { ArrowRightOutlined } from '@ant-design/icons'
 import { useMediaQuery } from 'react-responsive'
-import { isMobile } from 'services/resizeColumn'
+import { data } from './constant'
+import cssHeader from './About.module.scss'
 
-export default function Home(): React.JSX.Element {
+export default function Home(): React.ReactElement {
   const isPhone = useMediaQuery({
     query: '(max-width: 900px)',
   })
   return (
-    <>
+    <React.Fragment>
       <Row>
         <Col
           xs={{ span: 24 }} // Extra small screens (less than 576px)
@@ -72,7 +71,7 @@ export default function Home(): React.JSX.Element {
             <br />
             <br />
             When I’m not at the computer, I’m usually Hiking, hanging out with
-            my cat, or running around West Elizabeth searching a cure for{' '}
+            my cat, or running around West Elizabeth searching a cure for {''}
             <a
               href="https://duckduckgo.com/?q=arthur+morgan&iax=images&ia=images"
               rel="noopener noreferrer"
@@ -82,7 +81,7 @@ export default function Home(): React.JSX.Element {
               }}
             >
               Arthur Morgan
-            </a>{' '}
+            </a>
             .
           </Typography>
         </Col>
@@ -131,6 +130,6 @@ export default function Home(): React.JSX.Element {
           </a>
         </Col>
       </Row>
-    </>
+    </React.Fragment>
   )
 }

@@ -1,6 +1,9 @@
 import cx from 'classnames'
-import cssHeader from './Table.module.scss'
-import { Button, Row, Typography, Col } from 'antd'
+import { Button, Row, Typography } from 'antd'
+import ButtonLanguage from 'views/ButtonLanguage/ButtonLanguage'
+import React from 'react'
+import IconExternal from '@nexys/components/Icon/external'
+import { GithubFilled } from '@ant-design/icons'
 import {
   brankasStack,
   decisionEngineStack,
@@ -11,10 +14,9 @@ import {
   restApiTemplateStack,
   telkomNeucentrixStack,
   twitterCloneStack,
+  // eslint-disable-next-line import/extensions
 } from './dataSourceProject'
-import ButtonLanguage from 'views/ButtonLanguage/ButtonLanguage'
-import IconExternal from '@nexys/components/Icon/external'
-import { GithubFilled } from '@ant-design/icons'
+import cssHeader from './Table.module.scss'
 
 interface IDataTable {
   year: string
@@ -26,7 +28,7 @@ interface IDataTable {
 
 interface ILinkWeb {
   name: string
-  icon: React.JSX.Element
+  icon: React.ReactElement
   url: string
   isGitHub: boolean
 }
@@ -34,10 +36,10 @@ interface ILinkWeb {
 const LinkWeb = ({ name, icon, url, isGitHub }: ILinkWeb) => {
   if (isGitHub) {
     return (
-      <>
+      <React.Fragment>
         <Row className={cx(cssHeader.link)}>
           <a href={url} className={cx(cssHeader.textTo)}>
-            {name}{' '}
+            {name}
           </a>
           <Button
             style={{
@@ -47,16 +49,16 @@ const LinkWeb = ({ name, icon, url, isGitHub }: ILinkWeb) => {
             type="text"
             size="small"
             icon={icon}
-          />{' '}
+          />
         </Row>
-      </>
+      </React.Fragment>
     )
   }
   return (
-    <>
+    <React.Fragment>
       <Row className={cx(cssHeader.link)}>
         <a href={url} className={cx(cssHeader.textTo)}>
-          {name}{' '}
+          {name}
         </a>
         <Button
           style={{
@@ -66,9 +68,9 @@ const LinkWeb = ({ name, icon, url, isGitHub }: ILinkWeb) => {
           type="text"
           size="small"
           icon={icon}
-        />{' '}
+        />
       </Row>
-    </>
+    </React.Fragment>
   )
 }
 
@@ -104,7 +106,14 @@ export const data: IDataTable[] = [
     builtWith: decisionEngineStack.map((v) => {
       return <ButtonLanguage name={v.name} />
     }),
-    link: <></>,
+    link: (
+      <LinkWeb
+        name="GitHub"
+        icon={<GithubFilled />}
+        url="https://github.com/rizkyian78/decision_engine"
+        isGitHub
+      />
+    ),
   },
   {
     year: '2024',
@@ -113,7 +122,7 @@ export const data: IDataTable[] = [
     builtWith: rcmsStack.map((v) => {
       return <ButtonLanguage name={v.name} />
     }),
-    link: <></>,
+    link: <React.Fragment />,
   },
   {
     year: '2021',
@@ -143,7 +152,7 @@ export const data: IDataTable[] = [
         name="GitHub"
         icon={<GithubFilled />}
         url="https://github.com/rizkyian78/template-rest-api"
-        isGitHub={true}
+        isGitHub
       />
     ),
   },
@@ -154,7 +163,7 @@ export const data: IDataTable[] = [
     builtWith: twitterCloneStack.map((v) => {
       return <ButtonLanguage name={v.name} />
     }),
-    link: <></>,
+    link: <React.Fragment />,
   },
   {
     year: '2020',
@@ -195,7 +204,7 @@ export const data: IDataTable[] = [
     builtWith: telkomNeucentrixStack.map((v) => {
       return <ButtonLanguage name={v.name} />
     }),
-    link: <></>,
+    link: <React.Fragment />,
   },
   {
     year: '2021',

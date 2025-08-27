@@ -1,8 +1,8 @@
 import { Button } from 'antd'
 import cx from 'classnames'
+import { CSSProperties } from 'react'
 import cssHeader from './ButtonLanguage.module.scss'
 import { IButtonLanguage } from './constant'
-import { CSSProperties } from 'react'
 
 function ButtonLanguage({ name, style }: IButtonLanguage) {
   let newStyle: CSSProperties

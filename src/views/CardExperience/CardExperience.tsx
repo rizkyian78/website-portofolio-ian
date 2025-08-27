@@ -3,7 +3,6 @@ import React from 'react'
 import { Col, Space, Typography, Row, Card, Button } from 'antd'
 
 import cx from 'classnames'
-import cssHeader from './CardExperience.module.scss'
 import { LinkOutlined } from '@ant-design/icons'
 import IconExternal from '@nexys/components/Icon/external'
 import {
@@ -15,6 +14,7 @@ import {
 import ButtonLanguage from 'views/ButtonLanguage/ButtonLanguage'
 import { useMediaQuery } from 'react-responsive'
 import { bncStack } from 'views/ArchiveProject/partial/dataSourceProject'
+import cssHeader from './CardExperience.module.scss'
 
 export interface IButtonLanguage {
   name: string
@@ -25,7 +25,7 @@ function CardExperience() {
     query: '(max-width: 900px)',
   })
   return (
-    <>
+    <React.Fragment>
       <Card
         hoverable={false}
         className={cx(cssHeader.cardHover)}
@@ -41,7 +41,7 @@ function CardExperience() {
             backgroundColor: 'transparent',
           }}
         >
-          <Col className={cx(cssHeader.asDate)}>2024 July - Present</Col>
+          <Col className={cx(cssHeader.asDate)}>2024 July - 2025 August</Col>
           <Col
             span={14}
             style={{
@@ -216,9 +216,9 @@ function CardExperience() {
             </Row>
           </Col>
         </Row>
-      </Card>{' '}
+      </Card>
       <Card
-        hoverable={isPhone ? false : true}
+        hoverable={!isPhone}
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
@@ -288,7 +288,7 @@ function CardExperience() {
         </Row>
       </Card>
       <Card
-        hoverable={isPhone ? false : true}
+        hoverable={!isPhone}
         className={cx(cssHeader.cardHover)}
         onClick={() => {
           window.open('https://nusantech.com/')
@@ -409,7 +409,7 @@ function CardExperience() {
         </Row>
       </Card>
       <Card
-        hoverable={isPhone ? false : true}
+        hoverable={!isPhone}
         className={cx(cssHeader.cardHover)}
         style={{
           marginBottom: 30,
@@ -475,7 +475,7 @@ function CardExperience() {
           </Col>
         </Row>
       </Card>
-    </>
+    </React.Fragment>
   )
 }
 

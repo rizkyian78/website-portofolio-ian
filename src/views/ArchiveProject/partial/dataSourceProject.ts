@@ -85,31 +85,28 @@ export const slikCrawlerStack: IButtonLanguage[] = [
 
 export const decisionEngineStack: IButtonLanguage[] = [
   {
-    name: 'Nuxt',
+    name: 'Svelte',
   },
   {
-    name: 'Python',
+    name: 'Go',
   },
   {
-    name: 'Tornado',
+    name: 'Rust',
+  },
+  {
+    name: 'RabbitMQ',
+  },
+  {
+    name: 'Zookeeper',
   },
   {
     name: 'Typescript',
   },
   {
+    name: 'NestJs',
+  },
+  {
     name: 'Redis',
-  },
-  {
-    name: 'Jenkins',
-  },
-  {
-    name: 'Apollo',
-  },
-  {
-    name: 'RocketMQ',
-  },
-  {
-    name: 'Zookeeper',
   },
 ]
 

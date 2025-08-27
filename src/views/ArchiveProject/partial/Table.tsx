@@ -1,25 +1,8 @@
-import { Row, Col, Typography, Table } from 'antd'
 import cx from 'classnames'
 import cssHeader from './Table.module.scss'
-import { ColumnType } from 'antd/lib/table'
 import { columns, data } from './constant'
 
 const TableProject = () => {
-  const dataSource = [
-    {
-      key: '1',
-      name: 'Mike',
-      age: 32,
-      address: '',
-    },
-    {
-      key: '2',
-      name: 'John',
-      age: 42,
-      address: '10 Downing Street',
-    },
-  ]
-
   return (
     <table>
       <tr>

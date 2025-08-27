@@ -1,6 +1,5 @@
 import {
   GithubFilled,
-  InstagramOutlined,
   LinkedinFilled,
   MailFilled,
   MediumCircleFilled,
@@ -10,7 +9,7 @@ import cx from 'classnames'
 import cssHeader from './About.module.scss'
 
 export interface IHomeData {
-  icon: React.JSX.Element
+  icon: React.ReactElement
 }
 export const data: IHomeData[] = [
   {
