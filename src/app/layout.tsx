@@ -48,6 +48,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
+  const TIKTOK_TRACKING_ID = process.env.NEXT_PUBLIC_TIKTOK_ID
 
   return (
     <html lang="en">
@@ -62,7 +63,7 @@ export default function RootLayout({
               for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
               ttq.instance = function (t) { var e = ttq._i[t] || []; return e.push(ttq), ttq._i[t] = e, e };
               ttq.load = function (e, n) { var i = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i || {}; ttq._i[e] = []; var o = d.createElement("script"); o.type = "text/javascript"; o.async = !0; o.src = i + "?sdkid=" + e + "&lib=" + t; var a = d.getElementsByTagName("script")[0]; a.parentNode.insertBefore(o, a) };
-              ttq.load('YOUR_PIXEL_ID');
+              ttq.load('${TIKTOK_TRACKING_ID}');
               ttq.page();
             }(window, document, 'ttq');
           `}

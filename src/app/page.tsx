@@ -8,16 +8,48 @@ import {blogs, experience, projects} from '@/data/data'
 
 export default function Home() {
   const handleResumeClick = () => {
-    // @ts-ignore
-    window.gtag('event', 'click_resume', {
-      file: 'Rizky_Ian_Resume.pdf',
-    })
+    if (typeof window !== 'undefined') {
+      // Google Analytics 4
+      // @ts-ignore
+      window.gtag?.('event', 'click_resume', {
+        file_name: 'Rizky_Ian_Resume.pdf',
+        event_category: 'engagement',
+        event_label: 'resume_download',
+      })
+
+      // TikTok Pixel
+      // @ts-ignore
+      window.ttq?.track('ResumeDownload', {
+        file_name: 'Rizky_Ian_Resume.pdf',
+        location: 'hero_section',
+      })
+    }
   }
+
   const handleSocialClick = (platform: string) => {
     // @ts-ignore
-    window.gtag('event', 'click_social', {
-      platform,
-    })
+
+    if (typeof window !== 'undefined' && window.gtag) {
+      // @ts-ignore
+
+      window.gtag('event', 'click_social', {
+        platform,
+        event_category: 'engagement',
+        event_label: platform,
+      })
+    }
+
+    // TikTok Pixel event
+    // @ts-ignore
+
+    if (typeof window !== 'undefined' && window.ttq) {
+      // @ts-ignore
+
+      window.ttq.track('ClickSocial', {
+        platform,
+        location: 'hero_section',
+      })
+    }
   }
   return (
     <>
