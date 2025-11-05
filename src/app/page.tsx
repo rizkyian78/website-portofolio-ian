@@ -2,7 +2,6 @@ import Blogs from '@/component/Blog'
 import Experience from '@/component/Experience'
 import Projects from '@/component/Projects'
 import {blogs, experience, projects} from '@/data/data'
-import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -28,10 +27,10 @@ export default function Home() {
               <p className="mt-4 max-w-xs leading-normal">I craft secure and scalable web experiences for the banking and financial sector.</p>
               <nav className="nav hidden lg:block" aria-label="In-page jump links">
                 <ul className="mt-16 w-max">
-                  <li>
-                    <a href="#about" className="group flex items-center py-3 active">
-                      <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                      <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                  <li className="">
+                    <a href="#about" className="group flex items-center py-3 ">
+                      <span className="nav-indicator mr-4 h-px w-8 text-slate-200 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
+                      <span className="nav-text text-xs font-bold uppercase tracking-wides  text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
                         About
                       </span>
                     </a>
@@ -246,7 +245,7 @@ export default function Home() {
                 </p>
               </div>
             </section>
-            <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="WorkPlace">
+            <section id="experience" className={`mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 `} aria-label="WorkPlace">
               <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Experience</h2>
               </div>
@@ -342,7 +341,7 @@ export default function Home() {
             </section>
             <section id="writing" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Blog posts">
               <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Blog</h2>
+                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Blogs</h2>
               </div>
               <div>
                 <ul className="group/list">

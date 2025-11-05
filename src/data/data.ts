@@ -137,6 +137,16 @@ export const experience = [
       'PostgreSQL',
     ],
   },
+  {
+    company: 'Bangkit.id',
+    year: 'Nov 2025 - Present',
+    url: '',
+    role: 'Founder & Content Creator',
+    product: [],
+    jobDesc:
+      'Empower Indonesians to move beyond theory and actually build — websites, payment systems, AI workflows, and more — using the same tools and standards applied in professional environments. Beginner Friendly',
+    stacks: [],
+  },
 ].reverse()
 
 export const projects = [
