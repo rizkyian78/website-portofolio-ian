@@ -7,9 +7,6 @@ export default function NotFound() {
       <FuzzyText fontSize="10rem" baseIntensity={1} hoverIntensity={2} enableHover={true}>
         404 NOT FOUND
       </FuzzyText>
-      {/* <Link href="/" className="px-6 py-3 bg-teal-500 hover:bg-teal-400 text-white font-semibold rounded-lg transition">
-        Go Back Home
-      </Link> */}
     </main>
   )
 }

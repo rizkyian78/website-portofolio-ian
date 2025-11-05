@@ -1,4 +1,6 @@
 import type {Metadata} from 'next'
+import Script from 'next/script'
+
 import './globals.css'
 import {Analytics} from '@vercel/analytics/next'
 
@@ -45,8 +47,38 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
+
   return (
     <html lang="en">
+      {/* TikTok Pixel */}
+      <Script id="tiktok-pixel" strategy="afterInteractive">
+        {`
+            !function (w, d, t) {
+              w.TiktokAnalyticsObject = t;
+              var ttq = w[t] = w[t] || [];
+              ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie"];
+              ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } };
+              for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+              ttq.instance = function (t) { var e = ttq._i[t] || []; return e.push(ttq), ttq._i[t] = e, e };
+              ttq.load = function (e, n) { var i = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i || {}; ttq._i[e] = []; var o = d.createElement("script"); o.type = "text/javascript"; o.async = !0; o.src = i + "?sdkid=" + e + "&lib=" + t; var a = d.getElementsByTagName("script")[0]; a.parentNode.insertBefore(o, a) };
+              ttq.load('YOUR_PIXEL_ID');
+              ttq.page();
+            }(window, document, 'ttq');
+          `}
+      </Script>
+      {/* Google Analytics */}
+      <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+      <Script id="ga-init" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `}
+      </Script>
       <body className={`bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900`}>{children}</body>
       <Analytics />
     </html>

@@ -1,9 +1,21 @@
+'use client'
+
 import Blogs from '@/component/Blog'
 import Experience from '@/component/Experience'
 import Projects from '@/component/Projects'
 import {blogs, experience, projects} from '@/data/data'
 
 export default function Home() {
+  const handleResumeClick = () => {
+    window.gtag('event', 'click_resume', {
+      file: 'Rizky_Ian_Resume.pdf',
+    })
+  }
+  const handleSocialClick = (platform: string) => {
+    window.gtag('event', 'click_social', {
+      platform,
+    })
+  }
   return (
     <>
       <div
@@ -61,6 +73,7 @@ export default function Home() {
                   className="block hover:text-slate-200"
                   aria-label="Github (opens in a new tab)"
                   title="GitHub"
+                  onClick={() => handleSocialClick('GitHub')}
                   target="_blank"
                 >
                   <span className="sr-only">GitHub</span>
@@ -75,6 +88,7 @@ export default function Home() {
                   className="block hover:text-slate-200"
                   aria-label="TikTok (opens in a new tab)"
                   title="TikTok"
+                  onClick={() => handleSocialClick('TikTok')}
                   target="_blank"
                 >
                   <span className="sr-only">Tik Tok</span>
@@ -89,6 +103,7 @@ export default function Home() {
                   className="block hover:text-slate-200"
                   aria-label="Instagram (opens in a new tab)"
                   title="Instagram"
+                  onClick={() => handleSocialClick('Instagram')}
                   target="_blank"
                 >
                   <span className="sr-only">Instagram</span>
@@ -103,6 +118,7 @@ export default function Home() {
                   className="block hover:text-slate-200"
                   aria-label="Linkedin (opens in a new tab)"
                   title="Linkedin"
+                  onClick={() => handleSocialClick('Linkedin')}
                   rel="noreferrer noopener"
                   target="_blank"
                 >
@@ -118,6 +134,7 @@ export default function Home() {
                   className="block hover:text-slate-200"
                   aria-label="Medium (opens in a new tab)"
                   title="Medium"
+                  onClick={() => handleSocialClick('Medium')}
                   rel="noreferrer noopener"
                   target="_blank"
                 >
@@ -191,7 +208,12 @@ export default function Home() {
                 </p>
                 <p>
                   In my spare time, I’m usually climbing, or running around Hyrule searching for{' '}
-                  <span className="group/korok inline-flex lg:cursor-[url('/images/koroks/Elma.png'),_pointer] lg:font-medium lg:text-slate-200">
+                  <a
+                    href="https://www.google.com/search?client=safari&rls=en&q=korok+elma&ie=UTF-8&oe=UTF-8"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="group/korok inline-flex lg:cursor-[url('/images/koroks/Elma.png'),_pointer] lg:font-medium lg:text-slate-200"
+                  >
                     <span className="sr-only">Korok seeds</span>
                     <span className="group-hover/korok:text-red-400 transition duration-75 group-hover/korok:-translate-y-px delay-[50ms]" aria-hidden="true">
                       K
@@ -241,7 +263,7 @@ export default function Home() {
                     >
                       s
                     </span>
-                  </span>
+                  </a>
                 </p>
               </div>
             </section>
@@ -272,6 +294,7 @@ export default function Home() {
                     className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 font-semibold text-slate-200 group/link text-base"
                     href="/resume.pdf"
                     target="_blank"
+                    onClick={handleResumeClick}
                     rel="noreferrer noopener"
                     aria-label="View Full Résumé (opens in a new tab)"
                   >
