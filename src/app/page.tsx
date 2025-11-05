@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 'use client'
 
 import Blogs from '@/component/Blog'
@@ -7,11 +8,13 @@ import {blogs, experience, projects} from '@/data/data'
 
 export default function Home() {
   const handleResumeClick = () => {
+    // @ts-ignore
     window.gtag('event', 'click_resume', {
       file: 'Rizky_Ian_Resume.pdf',
     })
   }
   const handleSocialClick = (platform: string) => {
+    // @ts-ignore
     window.gtag('event', 'click_social', {
       platform,
     })
