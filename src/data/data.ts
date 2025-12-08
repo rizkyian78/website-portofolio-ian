@@ -163,10 +163,17 @@ export const projects = [
 export const blogs = [
   {
     title: 'SNAP Compliance: The Backbone of Indonesia’s Open API Future',
-    year: 2025,
+    year: 'Oct 2025',
     url: 'https://medium.com/@rizkyian78/snap-compliance-the-backbone-of-indonesias-open-api-future-d7f44e8d2d37',
     alt: 'SNAP Icon',
     imageUrl: '/snap.png',
+  },
+  {
+    title: 'ISO8583: The Messaging Standard Behind Every Card Transaction',
+    year: 'Dec 2025',
+    url: 'https://medium.com/@rizkyian78/snap-compliance-the-backbone-of-indonesias-open-api-future-d7f44e8d2d37',
+    alt: 'ISO8583 Icon',
+    imageUrl: '/ISO8583.jpg',
   },
 ]
 
