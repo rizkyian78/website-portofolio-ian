@@ -1,7 +1,6 @@
 import Image from 'next/image'
-import Stack from '@/component/Stacks'
 
-export default function Blogs({title, year, url, alt, imageUrl}: {title: string; url: string; year: number; alt: string; imageUrl: string}) {
+export default function Blogs({title, year, url, alt, imageUrl}: {title: string; url: string; year: string; alt: string; imageUrl: string}) {
   return (
     <li className="mb-12">
       <div className="group relative grid grid-cols-8 gap-4 transition-all sm:items-center sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
