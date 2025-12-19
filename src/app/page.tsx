@@ -5,8 +5,19 @@ import Blogs from '@/component/Blog'
 import Experience from '@/component/Experience'
 import Projects from '@/component/Projects'
 import {blogs, experience, projects} from '@/data/data'
+import React from 'react'
 
 export default function Home() {
+  const aboutRef = React.useRef<HTMLElement | null>(null)
+  const projectsRef = React.useRef<HTMLElement | null>(null)
+  const experienceRef = React.useRef<HTMLElement | null>(null)
+
+  const sections = {
+    about: aboutRef,
+    experience: experienceRef,
+    projects: projectsRef,
+  }
+
   const handleResumeClick = () => {
     if (typeof window !== 'undefined') {
       // Google Analytics 4
@@ -51,6 +62,32 @@ export default function Home() {
       })
     }
   }
+
+  const [activeSection, setActiveSection] = React.useState('projects')
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      {
+        root: null,
+        rootMargin: '-40% 0px -40% 0px',
+        threshold: 0,
+      },
+    )
+
+    Object.values(sections).forEach(ref => {
+      if (ref.current) observer.observe(ref.current)
+    })
+
+    return () => observer.disconnect()
+  }, [sections])
+  console.log(activeSection)
   return (
     <>
       <div
@@ -59,10 +96,10 @@ export default function Home() {
           background: 'radial-gradient(600px at 1365px 214px, rgba(29, 78, 216, 0.15), transparent 80%)',
         }}
       ></div>
-      <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
+      <div className="mx-auto min-h-screen max-w-7xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
         <a
           href="#content"
-          className="absolute left-0 top-0 block -translate-x-full rounded bg-gradient-to-br from-teal-400 via-blue-500 to-purple-600 px-4 py-3 text-sm font-bold uppercase tracking-widest text-white focus-visible:translate-x-0"
+          className="absolute left-0 top-0 block -translate-x-full rounded bg-linear-to-br from-teal-400 via-blue-500 to-purple-600 px-4 py-3 text-sm font-bold uppercase tracking-widest text-white focus-visible:translate-x-0"
         >
           Skip to Content
         </a>
@@ -74,26 +111,62 @@ export default function Home() {
               <p className="mt-4 max-w-xs leading-normal">I craft secure and scalable web experiences for the banking and financial sector.</p>
               <nav className="nav hidden lg:block" aria-label="In-page jump links">
                 <ul className="mt-16 w-max">
-                  <li className="">
-                    <a href="#about" className="group flex items-center py-3 ">
-                      <span className="nav-indicator mr-4 h-px w-8 text-slate-200 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                      <span className="nav-text text-xs font-bold uppercase tracking-wides  text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                  <li>
+                    <a href="#about" className={`group flex items-center py-3`}>
+                      <span
+                        className={
+                          activeSection === 'about'
+                            ? '`nav-indicator mr-4 h-px text-slate-200 transition-all w-16 bg-slate-200  motion-reduce:transition-none`'
+                            : 'nav-indicator mr-4 h-px w-8 text-slate-200 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none'
+                        }
+                      ></span>
+                      <span
+                        className={
+                          activeSection === 'about'
+                            ? 'nav-text text-xs font-bold uppercase tracking-wides text-slate-200 group-focus-visible:text-slate-200'
+                            : 'nav-text text-xs font-bold uppercase tracking-wides  text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200'
+                        }
+                      >
                         About
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="#experience" className="group flex items-center py-3">
-                      <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                      <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                    <a href="#experience" className="group flex items-center py-3 active">
+                      <span
+                        className={
+                          activeSection === 'experience'
+                            ? '`nav-indicator mr-4 h-px text-slate-200 transition-all w-16 bg-slate-200  motion-reduce:transition-none`'
+                            : 'nav-indicator mr-4 h-px w-8 text-slate-200 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none'
+                        }
+                      ></span>
+                      <span
+                        className={
+                          activeSection === 'experience'
+                            ? 'nav-text text-xs font-bold uppercase tracking-wides text-slate-200 group-focus-visible:text-slate-200'
+                            : 'nav-text text-xs font-bold uppercase tracking-wides  text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200'
+                        }
+                      >
                         Experience
                       </span>
                     </a>
                   </li>
                   <li>
                     <a href="#projects" className="group flex items-center py-3">
-                      <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                      <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                      <span
+                        className={
+                          activeSection === 'projects'
+                            ? '`nav-indicator mr-4 h-px text-slate-200 transition-all w-16 bg-slate-200  motion-reduce:transition-none`'
+                            : 'nav-indicator mr-4 h-px w-8 text-slate-200 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none'
+                        }
+                      ></span>
+                      <span
+                        className={
+                          activeSection === 'projects'
+                            ? 'nav-text text-xs font-bold uppercase tracking-wides text-slate-200 group-focus-visible:text-slate-200'
+                            : 'nav-text text-xs font-bold uppercase tracking-wides  text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200'
+                        }
+                      >
                         Projects
                       </span>
                     </a>
@@ -182,7 +255,7 @@ export default function Home() {
             </ul>
           </header>
           <main id="content" className="pt-24 lg:w-[52%] lg:py-24">
-            <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="About me">
+            <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="About me" ref={aboutRef}>
               <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only"></h2>
               </div>
@@ -247,7 +320,7 @@ export default function Home() {
                     href="https://www.google.com/search?client=safari&rls=en&q=korok+elma&ie=UTF-8&oe=UTF-8"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="group/korok inline-flex lg:cursor-[url('/images/koroks/Elma.png'),_pointer] lg:font-medium lg:text-slate-200"
+                    className="group/korok inline-flex lg:cursor-[url('/images/koroks/Elma.png'),pointer] lg:font-medium lg:text-slate-200"
                   >
                     <span className="sr-only">Korok seeds</span>
                     <span className="group-hover/korok:text-red-400 transition duration-75 group-hover/korok:-translate-y-px delay-[50ms]" aria-hidden="true">
@@ -302,15 +375,15 @@ export default function Home() {
                 </p>
               </div>
             </section>
-            <section id="experience" className={`mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 `} aria-label="WorkPlace">
+            <section id="experience" className={`mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 `} aria-label="WorkPlace" ref={experienceRef}>
               <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Experience</h2>
               </div>
               <div>
                 <ol className="group/list">
-                  {experience.map(v => {
+                  {experience.map((v, i) => {
                     return (
-                      <>
+                      <div key={v + i.toString()}>
                         <Experience
                           ariaLableCompany={v.company}
                           companyUrl={v.url}
@@ -320,13 +393,13 @@ export default function Home() {
                           year={v.year}
                           companyProduct={v.product}
                         />
-                      </>
+                      </div>
                     )
                   })}
                 </ol>
                 <div className="mt-12">
                   <a
-                    className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 font-semibold text-slate-200 group/link text-base"
+                    className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
                     href="/resume.pdf"
                     target="_blank"
                     onClick={handleResumeClick}
@@ -356,7 +429,7 @@ export default function Home() {
                 </div>
               </div>
             </section>
-            <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Selected projects">
+            <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Selected projects" ref={projectsRef}>
               <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Projects</h2>
               </div>
@@ -367,11 +440,7 @@ export default function Home() {
                   })}
                 </ul>
                 <div className="mt-12">
-                  <a
-                    className="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group"
-                    aria-label="View Full Project Archive"
-                    href="/archive"
-                  >
+                  <a className="inline-flex items-center font-medium leading-tight text-slate-200 group" aria-label="View Full Project Archive" href="/archive">
                     <span>
                       <span className="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none">
                         View Full Project{' '}
@@ -403,11 +472,11 @@ export default function Home() {
               </div>
               <div>
                 <ul className="group/list">
-                  {blogs.map(v => {
+                  {blogs.map((v, i) => {
                     return (
-                      <>
+                      <div key={v + i.toLocaleString()}>
                         <Blogs alt={v.alt} title={v.title} url={v.url} year={v.year} imageUrl={v.imageUrl} />
-                      </>
+                      </div>
                     )
                   })}
                 </ul>

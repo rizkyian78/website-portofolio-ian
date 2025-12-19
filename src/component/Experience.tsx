@@ -1,3 +1,4 @@
+import {randomInt} from 'crypto'
 import Stacks from './Stacks'
 
 export default function Experience({
@@ -65,9 +66,9 @@ export default function Experience({
           <ul className="mt-2 flex flex-wrap" aria-label="Related links">
             {companyProduct &&
               companyProduct?.length > 0 &&
-              companyProduct.map(v => {
+              companyProduct.map((v, i) => {
                 return (
-                  <>
+                  <div key={v + i.toString()}>
                     <li className="mr-4">
                       <a
                         className="relative mt-2 inline-flex items-center text-sm font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300"
@@ -83,18 +84,18 @@ export default function Experience({
                         <span>{v.product}</span>
                       </a>
                     </li>
-                  </>
+                  </div>
                 )
               })}
           </ul>
           <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
             {stacks &&
               stacks.length > 0 &&
-              stacks.map(stack => {
+              stacks.map((stack, index) => {
                 return (
-                  <>
+                  <div key={stack + index.toString()}>
                     <Stacks stack={stack} />
-                  </>
+                  </div>
                 )
               })}
           </ul>
